@@ -1,0 +1,83 @@
+{% extends "base_activity_template.html" %}
+{% load i18n webdesign staticfiles%}
+
+{% block javascript %}
+
+{% endblock %}
+{%  block  maincontent %}
+    <h1>{% trans 'Schudule'%}</h1>
+    <div class="container_12">
+        <div class="grid_7">
+            <h2>{{date}}</h2>
+
+            <div class="agenda">
+            <!-- Time markers -->
+                <ul class="agenda-time">
+                    <li class="from-7 to-8"><span>7 AM</span></li>
+                    <li class="from-8 to-9"><span>8 AM</span></li>
+                    <li class="from-9 to-10"><span>9 AM</span></li>
+                    <li class="from-10 to-11"><span>10 AM</span></li>
+                    <li class="from-11 to-12"><span>11 AM</span></li>
+                    <li class="from-12 to-13"><span>12 AM</span></li>
+                    <li class="from-13 to-14"><span>1 PM</span></li>
+                    <li class="from-14 to-15"><span>2 PM</span></li>
+                    <li class="from-15 to-16"><span>3 PM</span></li>
+                    <li class="from-16 to-17"><span>4 PM</span></li>
+                    <li class="from-17 to-18"><span>5 PM</span></li>
+                    <li class="from-18 to-19"><span>6 PM</span></li>
+                    <li class="from-19 to-20"><span>7 PM</span></li>
+                    <li class="at-20"><span>8 PM</span></li>
+                </ul>
+
+                <!-- Events list -->
+                <div class="agenda-events">
+                    {% for activity in today_activities %}
+
+                    <a href="{{activity.get_absolute_url}}" class="agenda-event from-{{activity.start_time.hour}}{% if activity.start_time.minute != 0 %}-30{% endif%} to-{{activity.end_time.hour}}{% if activity.end_time.minute != 0 %}-30{% endif%} {{activity.get_overlap_css}}">
+                        <time>{{activity.start_time}}-{{activity.end_time}}</time>
+                        {{activity.name}}
+                    </a>
+                    {% endfor %}
+
+                    <!--
+                    <span class="agenda-event from-14 to-17 anthracite-gradient event-3-on-3">
+                        <time>2 PM - 5 PM</time>
+                        Topic Review
+                        Grand Round : 14
+                    </span>
+
+                    <a href="javascript:void(0);" class="agenda-event from-7 to-10 event-1-on-3">
+                        <time>7 AM - 10 AM</time>
+                        ห้องประชุมพาหุรัด
+                        Grand Round : 7
+                    </a>
+
+                    <a href="javascript:void(0);" class="agenda-event from-9 to-11 event-2-on-3">
+                        <time>7 AM - 10 AM</time>
+                        ห้องประชุมพาหุรัด
+                        Collective Review : 7
+                    </a>
+                -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_5">
+            <p class="button-height">
+
+                <a href="{% url create_activity_group_url %}" class="button">
+                    <span class="button-icon"><span class="icon-star"></span></span>
+                    Create Activity Group
+                </a>
+                <a href="{% url create_activity_url %}" class="button">
+                    <span class="button-icon"><span class="icon-star"></span></span>
+                    Create Activity
+                </a>
+            </p>
+
+            <h2>Calendar</h2>
+            {{ calendar }}
+        </div>
+    </div>
+{% endblock%}

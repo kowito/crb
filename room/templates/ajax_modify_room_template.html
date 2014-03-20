@@ -1,0 +1,37 @@
+{% load i18n webdesign %}
+
+<script type="text/javascript">
+  /*<![CDATA[*/
+  jQuery(function() {
+      var form = jQuery("#form-container");
+      form.submit(function(e) {
+          jQuery("#sendbutton").attr('disabled', true)
+          jQuery("#sendwrapper").prepend('<span>Saving, please wait... </span>')
+          jQuery("#form-container-block").load(
+              form.attr('action') + ' #form-container-block',
+              form.serializeArray(),
+              function(responseText, responseStatus) {
+                  jQuery("#sendbutton").attr('disabled', false)
+              }
+          );
+          e.preventDefault();
+      });
+  });
+  /*]]>*/
+</script>
+
+<h2>{% trans 'Room Management'|capfirst%}</h2>
+<form action="/room/{{model_type}}/ajax/{{model_id}}/modify/" method="post" id="form-container">{% csrf_token %}
+    <div class="clearfix">&nbsp;</div>
+    <div class="container_12">
+        <div class="grid_5 alpha" id='form-container-block'>
+            <p><label for="id_name">Name:</label> {{form.name}}</p>
+            <p><label for="id_floor">Floor:</label> {{form.floor}}</p>
+            <p><label for="id_status">Status:</label> {{form.status}}</p>
+        </div>
+        <div class="grid_5 omega">
+            <ul>{{form.device}}</ul>
+        </div>
+        <p id="sendwrapper"><input type="submit" class="submit" value="{% trans 'Save' %}" id="sendbutton"/></p>
+    </div>
+</form>

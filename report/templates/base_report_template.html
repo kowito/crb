@@ -1,0 +1,8 @@
+{% extends "base_template.html" %}
+{% load i18n %}
+{% block nav_report %}<li><a href="{% url report_home %}" class="active">{% trans 'Report'%}</a></li>{% endblock%}
+{%  block  subnav %}
+    <ul>
+        <li><a href="{% url report_home %}" class="{% if page_info.home_tab%}sub_nav_active{% endif %}">{% trans 'Report'%}</a></li>
+    </ul>
+{% endblock%}

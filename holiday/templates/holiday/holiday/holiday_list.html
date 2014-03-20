@@ -1,0 +1,27 @@
+
+
+{% extends 'holiday/holiday/base.html' %}
+
+{% load i18n %}
+
+{% block filename %}
+  /home/kowito/Project/crb/holiday/templates/holiday/holiday/holiday_list.html
+{% endblock %}
+
+{% block header-link %}
+  <a href='{% url holiday_holiday_list %}'>
+    {% trans "Holiday List" %}
+  </a>
+{% endblock %}
+
+{% block header-description %}
+  {% trans "A page representing a list of objects." %}
+{% endblock %}
+
+{% block content %}
+  <h2>
+    {% trans "Holidays" %}
+  </h2>
+  {% include 'holiday/holiday/object_table_list.html' %}
+  {% include 'holiday/holiday/pagination.html' %}
+{% endblock %}

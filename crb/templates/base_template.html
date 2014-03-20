@@ -1,0 +1,711 @@
+{% load i18n  %}
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{% block title%}{% trans 'University Time Attendenced System' %}{%endblock%}</title>
+<script type="text/javascript" SRC="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+<script type="text/javascript" SRC="{% static 'js/jquery-ui-1.8.20.custom.min.js' %}"></script>
+
+    <!-- MASTER STYLESHEET-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- LOAD TIPSY TOOLTIPS-->
+    <script type="text/javascript" SRC="{% static 'js/jquery.tipsy.js' %}"></script>
+
+    <!-- LOAD CUSTOM JQUERY SCRIPTS-->
+    <script type="text/javascript" SRC="{% static 'js/scripts.js' %}"></script>
+
+	 <!-- LOAD FACEBOX -->
+	<script type="text/javascript" SRC="{% static 'js/facebox.js' %}"></script>
+    <link href="{% static 'css/facebox.css' %}" rel="stylesheet" type="text/css" />
+
+
+    <!-- LOAD FLOT GRAPHS -->
+    <script type="text/javascript" SRC="{% static 'js/jquery.flot.pack.js' %}"></script>
+    <!--[if IE]>
+     <script language="javascript" type="text/javascript" SRC="{% static 'js/excanvas.pack.js' %}"></script>
+    <![endif]-->
+
+    <!-- DEVELOPR Style -->
+    <link href="{% static 'css/developr/agenda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/calendars.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/colors.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/form.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/table.css' %}" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 6]>
+    <script SRC="{% static 'js/pngfix.js' %}"></script>
+    <script>
+        DD_belatedPNG.fix('.png_bg');
+    </script>
+    <![endif]-->
+
+
+    <!-- LOAD GRAPH JAVASCRIPT FILE
+	<script SRC="{% static 'js/graphs.js'%}" type="text/javascript"></script>
+    -->
+
+{% block extrahead %}{% endblock %}
+</head>
+
+<body>
+{% block header %}
+<div id="header" class="png_bg">
+
+    <div id="head_wrap" class="container_12">
+
+        <!-- start of logo - you could replace this with an image of your logo -->
+        <div id="logo" class="grid_4">
+          <h1>{% blocktrans %}Time<span>Attendance</span>{% endblocktrans %}</h1>
+        </div>
+        <!-- end logo -->
+
+        <!-- start control panel -->
+        {% block control_panel%}
+    	<div id="controlpanel" class="grid_8">
+
+            <ul>
+                {% if user.is_authenticated %}
+                <li><a href="{% url account_settings %}" class="first">{% trans 'Signed in as '%}<strong>{{ user.username }}.</strong></a></li>
+                <li><a href="/manage">{% trans 'System Setting'%}</a></li>
+                <li><a href="{% url auth_logout %}" class="last">{% trans 'Sign Out' %}</a></li>
+
+                {% else %}
+                <li><p>{% trans 'Welcome, new user. ' %}<a href="{% url django.contrib.auth.views.login %}" class="none">{% trans 'Please log in.'%}</a></p></li>
+                {% endif %}
+
+            </ul>
+        </div>
+        {% endblock%}
+        <!-- end control panel -->
+
+        <!-- start navigation -->
+      	<div id="navigation" class=" grid_12">
+        {% block nav %}
+            <ul>
+                {% block nav_calendar %}<li><a href="{% url calendar_home %}">{% trans 'Calendar'%}</a></li>{% endblock%}
+                {% block nav_course %}<li><a href="/academic/courses">{% trans 'Course'%}</a></li>{% endblock%}
+                {% block nav_staff %}<li><a href="/staff">{% trans 'Staff'%}</a></li>{% endblock%}
+                {% block nav_transaction_log %}<li><a href="/transaction">{% trans 'Transaction Log'%}</a></li>{% endblock%}
+                <!--
+		{% block nav_room %}<li><a href="/room">{% trans 'Conferance Rooms'%}</a></li>{% endblock%}
+		-->
+                {% block nav_report %}<li><a href="/report">{% trans 'Report'%}</a></li>{% endblock%}
+            </ul>
+        {% endblock%}
+        </div>
+        <!-- end navigation -->
+
+    </div><!-- end headwarp  -->
+</div><!-- end header -->
+{% endblock %}
+
+
+<!-- staqrt subnav -->
+
+<div id="sub_nav">
+<div id="subnav_wrap" class="container_12">
+    <!-- start sub nav list -->
+	<div id="subnav" class=" grid_12">
+    {% block  subnav%}
+        <ul>
+            <li><a href="#" class="active">First</a></li>
+            <li><a href="#" class="sub_nav_active">Active</a></li>
+            <li><a href="#">Sub navi</a></li>
+            <li><a href="#">Sub navi</a></li>
+            <li><a href="#">Sub navi</a></li>
+            <li><a href="#">Sub navi</a></li>
+            <li><a href="#">Sub navi</a></li>
+          	<li><a href="#" class="sub_nav_last">Last Link</a></li>
+        </ul>
+    {% endblock %}
+    </div>
+    <!-- end subnavigation list -->
+    </div>
+</div>
+<!-- end sub_nav -->
+
+
+<!-- EVERYTING BELOW IS THE MAIN CONTENT -->
+<div id="main_content_wrap" class="container_12">
+{%  block  maincontent %}
+
+	<!-- start icon dock-->
+	<div id="icondock" class="grid_12">
+      <ul>
+			<li><a HREF="remote.html" rel="facebox" title="Check Your E-Mails"><img SRC="{% static 'images/icondock/email.png'%}" alt="Mail" /><br />Mail<span>4</span></a></li>
+            <li><a href="#" rel="tipsy" title="View Your Contact List"><img SRC="{% static 'images/icondock/book_addresses.png'%}" alt="Contacts" /><br />Contacts</a></li>
+            <li><a href="#" rel="tipsy" title="View Recent Sales Activity"><img SRC="{% static 'images/icondock/coins.png'%}" alt="Sales" /><br />Sales<span>8</span></a></li>
+            <li><a href="#" rel="tipsy" title="Analyse Site Activity"><img SRC="{% static 'images/icondock/chart_bar.png'%}" alt="Stats" /><br />Statistics</a></li>
+            <li><a href="#" rel="tipsy" title="View Recent Commenets"><img SRC="{% static 'images/icondock/comment.png'%}" alt="Comments"/><br />
+            Comments<span>7</span></a></li>
+            <li><a href="#" rel="tipsy" title="View Registered Users"><img SRC="{% static 'images/icondock/user.png'%}" alt="Users" /><br />Users</a></li>
+            <li><a href="#" rel="tipsy" title="Check Your Events"><img SRC="{% static 'images/icondock/date.png'%}" alt="Events" /><br />Events<span>1</span></a></li>
+            <li><a href="#" rel="tipsy" title="Manage Incoming Orders"><img SRC="{% static 'images/icondock/basket.png'%}" alt="Orders" /><br />Orders</a></li>
+   			<li><a href="#" rel="tipsy" title="Set Reminders"><img SRC="{% static 'images/icondock/bell.png'%}" alt="Reminders" /><br />Reminders</a></li>
+	  </ul>
+
+
+	</div><!-- end icon dock-->
+
+    <div class="clearfix">&nbsp;</div>
+
+        <div class="container_12">
+
+        <div id="notices" class="grid_4">
+
+        <h2>Notices</h2>
+
+            <ul>
+
+                <li><a href="#" class="notice-icon1">Johnathan Smith replied to a Comment of yours.</a></li>
+                <li><a href="#" class="notice-icon2">Samantha English added a Task for you.</a></li>
+                <li><a href="#" class="notice-icon3">Peter Gillingham created an Event.</a></li>
+                <li><a href="#" class="notice-icon4">Susanna Longstanton addded a News article.</a></li>
+                <li><a href="#" class="notice-icon5">John Doe made a Sale.</a></li>
+                <li><a href="#" class="notice-icon6">Karen Penchalleto sent you a reminder.</a></li>
+                <li><a href="#" class="notice-icon7">Peter Kingston raised a support ticket.</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!--  PLACEHOLDER FOR FLOT - REMOVE IF NOT REQUIRED -->
+        <div class="grid_8">
+
+            <h2>Visitor Stats</h2>
+
+             <div id="placeholder"></div>
+
+        </div>
+
+        </div>
+
+        <div class="clearfix">&nbsp;</div>
+
+        <div class="container_12">
+
+        <h2>Tabbed Content Example</h2>
+        <ul class="tabs">
+            <li><a href="#tab1">Gallery</a></li>
+            <li><a href="#tab2">Form Elements</a></li>
+        </ul>
+
+    <div class="tab_container">
+        <div id="tab1" class="tab_content">
+            <!-- START IMAGE GALLERY -->
+
+    <h2>Image Gallery</h2>
+
+    <ul class="imglist">
+
+            <li>
+            	<img SRC="{% static 'images/thumb1.jpg'%}" width="100" height="100" alt="Image1" />
+            	<div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb1_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb2.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb2_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb3.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb3_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb4.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb4_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb5.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb5_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb6.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb6_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb7.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb7_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb8.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb8_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb7.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb7_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb5.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb5_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb6.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb6@_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb1.jpg'%}" width="100" height="100" alt="Image1" />
+                <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb1_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb4.jpg'%}" width="100" height="100" alt="Image1" />
+			    <div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb4_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+            <li>
+
+            	<img SRC="{% static 'images/thumb3.jpg'%}" width="100" height="100" alt="Image1" />
+            	<div class="actions">
+					<a class="imglistbutton" rel="facebox" HREF="images/thumb3_big.jpg'%}"><img SRC="{% static 'images/magnifier.png'%}" width="16" height="16" alt="View" /></a>
+					<a href="#" class="imglistbutton"><img SRC="{% static 'images/cancel.png'%}" width="16" height="16" alt="Delete" /></a>
+				</div>
+
+            </li>
+
+    </ul>
+
+    <!-- END IMAGE GALLERY -->
+        </div>
+        <div id="tab2" class="tab_content">
+           <h2>Forms</h2>
+
+           	<p>
+                 Forms are great for collecting informatoin or simply for use in your web application.
+                 With Reality Admin, you get stylish form elements ready to use straight out the box.
+                 They're already skinned, pre-sized adn formatted for you so you can simply get on and use them as you choose.
+         	</p>
+
+           <form action="" method="post">
+              <!-- RADIO GROUPS -->
+              <p>
+                  <input type="radio" name="radio" id="RADIO1" value="RADIO1" />
+                  <label for="RADIO1">RADIO ONE</label>
+                  <input type="radio" name="radio" id="RADIO2" value="RADIO2" />
+                  <label for="RADIO2">RADIO TWO</label>
+                  <input type="radio" name="radio" id="RADIO3" value="RADIO3" />
+                  <label for="RADIO3">RADIO THREE</label>
+              </p>
+
+
+              <p>
+                  <label>Small Input Box:</label><br />
+                  <input type="text" class="text small" />
+                  <span class="valid">This is a validation message</span>
+              </p>
+
+
+
+              <p>
+             	 <label>Medium Input Box:</label><br />
+                 <input type="text" class="text medium" />
+                 <span class="error">This is an error message</span>
+              </p>
+
+              <p>
+                  <label>Large Input Box</label><br />
+                  <input type="text" class="text large" />
+              </p>
+
+
+            <!-- CHECKBOXES -->
+            <p>
+                <input type="checkbox" class="checkbox" checked="checked" id="cbdemo1" />
+                <label for="cbdemo1">Checkbox label</label>
+                <input type="checkbox" class="checkbox" id="cbdemo2" />
+                <label for="cbdemo2">Checkbox label</label>
+
+            <!-- COMBO SELECT BOX -->
+
+            <label for="cbo">Dropdown/Combo Box:</label>
+
+            <select name="cbo" id="cbo" class="select">
+
+                <option value="One">One</option>
+                <option value="Two">Two</option>
+                <option value="Three">Three</option>
+                <option value="Four">Four</option>
+                <option value="Five">Five</option>
+
+            </select>
+
+            </p>
+
+			<p>
+                  <label>Text Area Without Editor:</label><br />
+                  <textarea cols="8" rows="5"></textarea>
+            </p>
+            <p>
+                <label>Text Area with Editor:</label><br />
+                <textarea cols="8" rows="6" class="wysiwyg"></textarea>
+            </p>
+			<p>
+          		<input type="submit" class="submit" value="Button" />
+                <input name="Submit2" type="submit" class="submit" value="Another Button" />
+                <input name="Reset2" type="submit" class="submit special" value="Special Button" />
+       		</p>
+           </form>
+        </div>
+</div>
+</div>
+
+        <div class="clearfix">&nbsp;</div>
+
+
+         <!-- NOTIFICATION - USES CLASS OF "WARNING" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+                <div class="notification lightbulb canhide">
+
+                    <p><strong>NOTIFICATION: </strong>
+                    This is a notification message. You can use this to provide site feedback
+                    or provide hints and tips. Click me and I go away.</p>
+
+                </div>
+
+
+
+        <div class="container_12">
+        <h2>Accordion Widget</h2>
+        <p>Somtimes it's easier to compartmentalise data or visualisations. In the example below we have different types of content that we have grouped up - making it easier for the user to choose which part they want to look at, and also focusing the user on what is important.</p>
+
+
+        <div class="clearfix">&nbsp;</div>
+        <h3 class="acc_trigger"><a href="#">Something Important</a></h3>
+            <div class="acc_container">
+            <div class="block">
+            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus   sem sed libero vehicula at mattis magna semper. Nulla augue metus,   euismod non fermentum et, auctor quis dolor. Mauris a nisi quam, aliquam   placerat felis. Nam vestibulum facilisis eros, vitae tempus est feugiat   commodo. Pellentesque quis mi eu arcu tristique ullamcorper vel ornare   lorem. Sed euismod quam ac orci bibendum fringilla. Suspendisse dolor   lectus, dapibus vitae cursus nec, auctor id ante. Etiam consectetur,   turpis id rhoncus tincidunt, justo ligula fringilla enim, sed blandit   tortor mi ac nisl. Praesent non nisi risus. Duis hendrerit elit ut   turpis pretium suscipit. Vestibulum ante ipsum primis in faucibus orci   luctus et ultrices posuere cubilia Curae; Sed sed dui velit, accumsan   malesuada orci. Suspendisse interdum turpis ut nisi dictum laoreet. In   hac habitasse platea dictumst. Vivamus luctus dignissim quam eget   adipiscing. Vestibulum ac mauris eros. Etiam diam metus, molestie in   tincidunt vel, dignissim ac magna. </p>
+            </div>
+        </div>
+        <h3 class="acc_trigger"><a href="#">Another Content Area</a></h3>
+            <div class="acc_container">
+            <div class="block">
+            	<p>Maecenas in metus magna, id faucibus nulla. Vestibulum pellentesque   ligula vitae odio tristique tempus. Integer vehicula, ligula in varius   tempus, lorem ante dictum sem, a venenatis diam tortor a enim. Aliquam   erat volutpat. Integer ac ipsum metus. Pellentesque vulputate, quam et   congue tristique, elit elit faucibus metus, condimentum porta velit   lectus et sapien. Maecenas rutrum bibendum massa nec convallis. Aliquam   varius imperdiet augue a ultricies. Donec sit amet est vitae mi   porttitor iaculis. Maecenas scelerisque pellentesque nisl non tempor.</p>
+            </div>
+        </div>
+         <h3 class="acc_trigger"><a href="#">Example of Accordion Menu Item</a></h3>
+            <div class="acc_container">
+            <div class="block">
+            	<p>Fusce a ligula in quam vehicula venenatis. Sed nec nunc sed lorem   fermentum commodo a nec erat. Sed urna erat, scelerisque tincidunt   fringilla ut, mollis quis velit. Pellentesque habitant morbi tristique   senectus et netus et malesuada fames ac turpis egestas. Aliquam purus   libero, cursus at euismod eget, adipiscing vel purus. Sed porta nibh   quis dolor euismod tincidunt. Vestibulum tellus nisi, scelerisque at   volutpat ac, eleifend ac ipsum. Maecenas eget est sit amet eros   hendrerit aliquet. Sed vitae lacus dolor. Cras fermentum lacinia   faucibus. </p>
+            </div>
+        </div>
+
+
+    </div>
+
+        <div class="clearfix">&nbsp;</div>
+        <div class="container_12">
+
+        <!--START NOTIFICATIONS  -->
+        <h2>Notifications</h2>
+
+            <p>
+            Reality Admin includes 5 notifications, and you can always make your own easily by
+            using one of the icons provided. Click to watch them fade away!
+            </p>
+
+
+            <!-- INFORMATION - USES CLASS OF "IN2FORMATION" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification information canhide">
+
+              <p><strong>INFORMATION: </strong>
+                This is an information message. You can use this to give the user
+                information about actions or their account etc. Click me and I go away..</p>
+  			</div>
+
+            <!-- WARNING - USES CLASS OF "WARNING" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification warning canhide">
+
+                <p><strong>WARNING: </strong>
+                This is a warning message. You can use this to provide warning messages
+                or confirmation to users. Click me and I go away.</p>
+            </div>
+
+            <!-- SUCCESS - USES CLASS OF "SUCCESS" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification success canhide">
+
+                <p><strong>SUCCESS: </strong>
+                This is a success message, used to provide feedback to the user
+                that something worked. Click me and I go away</p>
+            </div>
+
+
+            <!-- FAILURE - USES CLASS OF "FAILURE" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification failure canhide">
+
+                <p><strong>FAILURE: </strong>
+                This is a failure message, but hey it's not all doom and gloom you c
+                an click me and I'll go away and hide again.</p>
+            </div>
+
+     </div>
+  	<!--END NOTIFICATIONS  -->
+
+
+	<div class="clearfix">&nbsp;</div>
+
+
+
+
+    </div>
+
+    <div class="clearfix">&nbsp;</div>
+
+  <!-- START TABULAR DATA EXAMPLE -->
+  <div class="container_12">
+
+	<h2>Table Example</h2>
+
+            <p>
+                Tables are a great way of displaying lots of data, and logically.
+                The default styling on the tables is unobtrusive and enables both text
+                and images as show in the example below.
+            </p>
+
+    <div class="clearfix">&nbsp;</div>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+        <tr>
+
+            <th width="5%" scope="col">
+            <input type="checkbox" name="checkbox" id="checkbox" class="checkall" /><label for="checkbox"></label></th>
+
+            <th width="18%" scope="col">Firstname</th>
+            <th width="16%" scope="col">Lastname</th>
+            <th width="29%" scope="col">E-Mail</th>
+            <th width="13%" scope="col">Start Date</th>
+            <th width="11%" scope="col">End Date</th>
+            <th width="8%" scope="col">Status</th>
+        </tr>
+
+        <tr>
+
+            <td scope="col"><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">24/02/2010</td>
+            <td scope="col">12/12/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_offline.png'%}" alt="Online" /><img SRC="{% static 'images/shield.png'%}" alt="Shield" width="16" height="16" /></td>
+        </tr>
+
+        <tr>
+
+            <td scope="col"><input type="checkbox" name="checkbox3" id="checkbox3" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">12/09/2009</td>
+            <td scope="col">21/12/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_online.png'%}" alt="Online" /><img SRC="{% static 'images/medal_gold_3.png'%}" alt="Gold" width="16" height="16" /></td>
+        </tr>
+
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox4" id="checkbox4" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">05/09/2009</td>
+            <td scope="col">12/11/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_offline.png'%}" alt="Offline" border="0" usemap="#O" /></td>
+        </tr>
+
+        <tr>
+
+            <td scope="col"><input type="checkbox" name="checkbox5" id="checkbox5" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">12/06/2009</td>
+            <td scope="col">13/08/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_online.png'%}" alt="Online" /><img SRC="{% static 'images/shield.png'%}" alt="Shield" width="16" height="16" /></td>
+        </tr>
+
+        <tr>
+
+            <td scope="col"><input type="checkbox" name="checkbox6" id="checkbox6" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">05/06/2009</td>
+            <td scope="col">14/7/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_offline.png'%}" alt="Offline" border="0" usemap="#O" /><img SRC="{% static 'images/medal_silver_1.png'%}" alt="Silver" /></td>
+        </tr>
+
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox7" id="checkbox7" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">12/09/2009</td>
+            <td scope="col">21/08/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_offline.png'%}" alt="Offline" border="0" usemap="#O" /><img SRC="{% static 'images/shield.png'%}" alt="Shield" /></td>
+        </tr>
+
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox8" id="checkbox8" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">08/12/2009</td>
+            <td scope="col">22/10/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_online.png'%}" alt="Online" /><img SRC="{% static 'images/medal_gold_3.png'%}" alt="Shield" width="16" height="16" /></td>
+        </tr>
+
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox9" id="checkbox9" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">12/09/2009</td>
+            <td scope="col">28/09/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_online.png'%}" alt="Online" /></td>
+        </tr>
+
+        <tr>
+
+            <td scope="col"><input type="checkbox" name="checkbox10" id="checkbox10" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">05/04/2009</td>
+            <td scope="col">21/12/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_offline.png'%}" alt="Offline" border="0" usemap="#O" /></td>
+        </tr>
+
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox11" id="checkbox11" /></td>
+            <td scope="col">Johnathan</td>
+            <td scope="col">Doe</td>
+            <td scope="col"><a href="#">john.doe@myinternet.com</a></td>
+            <td scope="col">12/7/2009</td>
+            <td scope="col">21/12/2011</td>
+            <td scope="col"><img SRC="{% static 'images/status_offline.png'%}" alt="Offline" border="0" usemap="#O" /><img SRC="{% static 'images/medal_bronze_1.png'%}" alt="Bronze" /></td>
+        </tr>
+    </table>
+
+    <!-- END TABULAR DATA EXAMPLE -->
+
+
+
+           <div class="grid_12">
+
+           <div class="clearfix">&nbsp;</div>
+
+            <ul id="pagination">
+
+                <li class="previous-off">&laquo;Previous</li>
+                <li class="active">1</li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li class="next"><a href="#">Next &raquo;</a></li>
+
+            </ul>
+           </div>
+           <div class="clearfix">&nbsp;</div>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+<div class="container_12">
+{% endblock %}
+   <!-- START FOOTER -->
+   {% block footer %}
+    <div id="footer" class="grid_12">
+     <p>&copy; Copyright 2012 Chrimatos Technology Co.,Ltd. | <a href="#">Top</a></p>
+    </div>
+    <!-- END FOOTER -->
+    {% endblock %}
+
+  </div><!-- end content wrap -->
+</body>
+</html>
+{% block javascript %}
+{% endblock %}

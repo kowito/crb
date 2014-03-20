@@ -1,0 +1,118 @@
+.module{
+	background: #FCFCFC;
+	border-radius: 10px;
+	/*box-shadow: 3px 3px #aaa;*/
+	padding:10px 5px;
+	margin-top:15px;
+	border: #DDD 1px solid;
+
+}
+.module table caption{
+	border-radius:10px 10px 0 0;
+	margin:-7px 0 0 0;
+	padding:10px 0;
+	border-bottom: #CD3854 1px solid;
+
+
+}
+.module table caption a{
+	color:#CD3854;
+	font-size: 20px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: normal;
+	text-decoration:none;
+}
+
+.module table tbody th{
+	border:none;
+	background: none;
+}
+.object-tools{
+	display: inline;
+}
+.object-tools li a{
+	line-height: 15px;
+	list-style: none;
+}
+
+a{
+	text-decoration:none;
+	color:#46000E;
+}
+
+a.changelink,a.deletelink,a.addlink{
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 1px #AAAAAA;
+    clear: both;
+    display: block;
+    margin: 3px;
+    padding: 3px 3px 3px 24px;
+    text-decoration: none;
+	color:#fff;
+    }
+a.changelink{
+    background: url("/static/admin/img/icon_changelink.gif") no-repeat scroll 10px 5px #888;
+    }
+a.deletelink{
+    background: url("/static/admin/img/icon_deletelink.gif") no-repeat 10px 5px #888;
+}
+a.addlink{
+    background: url("/static/admin/img/icon_addlink.gif") no-repeat 10px 5px #888;
+}
+
+a.changelink:visited,a.deletelink:visited,a.addlink:visited{
+	color:#ddd;
+}
+
+.submit-row{
+	margin:10px 0;
+}
+fieldset{
+	padding-top:10px;
+	border-bottom:1px #ccc solid;
+}
+
+.errors{
+	background:#F5B5A9;
+	padding:5px;
+	border:#EB5339 1px solid;
+	margin:10px 0;
+	border-radius:5px;
+}
+.errorlist li{
+	color: #900;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 11px;
+	margin-left: 8px;
+
+    padding: 3px;
+    background: none repeat scroll 0 0 #FFEEEE;
+    border: 1px solid #FFCCCC;
+    border-radius: 3px;
+}
+
+form label{
+	display:block;
+	width:125px;
+	float:left;
+}
+.form-row{
+	margin:5px 0;
+}
+
+#changelist table {
+    width: 100%;
+}
+
+#changelist table th.action-checkbox-column{
+	width:24px;
+}
+
+#change-history{
+	width: 100%;
+}
+
+.filter{
+	clear: right;
+}

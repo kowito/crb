@@ -1,0 +1,14 @@
+{% extends "base_template.html" %}
+{% load i18n staticfiles %}
+
+{% block extrahead %}
+
+{% endblock %}
+
+{% block nav_calendar %}<li><a href="{% url calendar_home %}" class="active">{% trans 'Calendar'%}</a></li>{% endblock%}
+
+{%  block  subnav %}
+    <ul>
+        <li><a href="{% url calendar_home %}" class="{% if page_info.home_tab%}sub_nav_active{% endif %}">{% trans 'Calendar'%}</a></li>
+    </ul>
+{% endblock%}

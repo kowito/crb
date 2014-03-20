@@ -1,0 +1,17 @@
+{% extends "base_staff_template.html" %}
+{% load i18n webdesign %}
+
+{%  block  maincontent %}
+<h1>{% trans  'Conferance Rooms'%}</h1>
+  <div class="container_12">
+	<h2>{% trans page_info.title %}</h2>
+            {% lorem 1 p%}
+    <div class="clearfix">&nbsp;</div>
+    <form action="." method="post">{% csrf_token %}
+    <ul>
+        {{form.as_ul}}
+        <li><input type="submit" value="{% trans 'Save' %}" /></li>
+    </ul>
+    </form>
+    </div>
+{% endblock%}

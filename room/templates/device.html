@@ -1,0 +1,33 @@
+{% extends "base_room_template.html" %}
+{% load i18n %}
+
+{%  block  maincontent %}
+<h1>{% trans  'Conferance Rooms'%}</h1>
+  <div class="container_12">
+	<h2>{% trans page_info.title %} <a href='/room/device/add'>+</a></h2>
+            <p>
+                {% trans 'Device List' %}
+            </p>
+    <div class="clearfix">&nbsp;</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th width="5%" scope="col">
+            <input type="checkbox" name="checkbox" id="checkbox" class="checkall" /><label for="checkbox"></label></th>
+            <th scope="col">{% trans 'Name'%}</th>
+            <th scope="col">{% trans 'Code' %}</th>
+            <th scope="col" width="10%" >{% trans 'Action'%}</th>
+        </tr>
+        {% for  device in device_list%}
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox{{device.id}}" id="checkbox{{device.id}}" /></td>
+            <td scope="col"><a href='{{device.get_absolute_url}}/modify/'>{{device.name}}</a></td>
+            <td scope="col">{{device.device_code}}</td>
+            <td>
+                <a href = "{{device.get_absolute_url}}/modify/">Edit</a>
+                <a href = "{{device.get_absolute_url}}/delete/">Delete</a>
+            </td>
+        </tr>
+        {% endfor%}
+
+    </table>
+{% endblock%}

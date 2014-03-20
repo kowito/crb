@@ -1,0 +1,57 @@
+{% extends "base_activity_template.html" %}
+{% load i18n webdesign staticfiles%}
+
+
+{% block javascript %}
+
+{% endblock %}
+{%  block  maincontent %}
+    <h1>{% trans 'Schudule'%}</h1>
+    <div class="container_12">
+        <div class="block margin-bottom">
+            <h3 class="block-title green-gradient glossy">{{activity_detail_report.activity.name}} </h3>
+            <div class="with-padding">
+                <p>
+                    {% trans "Date" %} : {{activity_detail_report.activity.date}} : {{activity_detail_report.activity.start_time}}-{{activity_detail_report.activity.end_time}}<br />
+                    {% trans "Description" %} : {{activity.description}}
+                </p>
+                {% trans 'OK' %} : {{activity_detail_report.status_ok}}, {% trans 'Late' %} : {{activity_detail_report.status_late}}, {% trans 'Missing' %} : {{activity_detail_report.status_miss}}
+                </ul>
+            </div>
+
+
+            <div class="clear_fix"> </div>
+
+            {% if activity_report %}
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+
+                    <th scope="col">{% trans 'Code' %}</th>
+					<th scope="col">{% trans 'Title' %}</th>
+                    <th scope="col">{% trans 'Name' %}</th>
+                    <th scope="col">{% trans 'Lastname'%}</th>
+                    <th scope="col">{% trans 'Checkin Time'%}</th>
+                    <th scope="col">{% trans 'Checkout Time'%}</th>
+                    <th scope="col">{% trans 'Status'%}</th>
+                </tr>
+                {% for  activity_report in activity_report  %}
+
+                <tr onclick="document.location = '{{activity_report.attendance.get_absolute_url}}';">
+					<td scope="col">{{activity_report.attendance.student_code}}</td>
+                    <td scope="col">{{activity_report.attendance.people.title}}</td>
+                    <td scope="col">{{activity_report.attendance.people.name_th}}</td>
+                    <td scope="col">{{activity_report.attendance.people.lastname_th}}</td>
+                    <td scope="col">{{activity_report.check_in|date:"G:i"|default_if_none:'-'}}</td>
+                    <td scope="col">{{activity_report.check_out|date:"G:i"|default_if_none:'-'}}</td>
+                    <td scope="col"><small class="tag {{activity_report.tx_bg_color}}">{{activity_report.get_transaction_status_display}}</small></td>
+
+                </tr>
+
+                {% endfor%}
+            </table>
+            {% else %}
+                <h2>{% trans "Event did not occur." %}</h2>
+            {% endif %}
+        </div>
+    </div>
+{% endblock%}

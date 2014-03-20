@@ -1,0 +1,71 @@
+{% load i18n  %}
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{% block title%}{% trans 'University Time Attendenced System' %}{%endblock%}</title>
+<script type="text/javascript" SRC="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+<script type="text/javascript" SRC="{% static 'js/jquery-ui-1.8.20.custom.min.js' %}"></script>
+
+    <!-- MASTER STYLESHEET-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- LOAD TIPSY TOOLTIPS-->
+    <script type="text/javascript" SRC="{% static 'js/jquery.tipsy.js' %}"></script>
+
+    <!-- LOAD CUSTOM JQUERY SCRIPTS-->
+    <script type="text/javascript" SRC="{% static 'js/scripts.js' %}"></script>
+
+	 <!-- LOAD FACEBOX -->
+	<script type="text/javascript" SRC="{% static 'js/facebox.js' %}"></script>
+    <link href="{% static 'css/facebox.css' %}" rel="stylesheet" type="text/css" />
+
+
+    <!-- LOAD FLOT GRAPHS -->
+    <script type="text/javascript" SRC="{% static 'js/jquery.flot.pack.js' %}"></script>
+    <!--[if IE]>
+     <script language="javascript" type="text/javascript" SRC="{% static 'js/excanvas.pack.js' %}"></script>
+    <![endif]-->
+
+    <!-- DEVELOPR Style -->
+    <link href="{% static 'css/developr/agenda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/calendars.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/colors.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/form.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/developr/table.css' %}" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 6]>
+    <script SRC="{% static 'js/pngfix.js' %}"></script>
+    <script>
+        DD_belatedPNG.fix('.png_bg');
+    </script>
+    <![endif]-->
+
+
+    <!-- LOAD GRAPH JAVASCRIPT FILE
+	<script SRC="{% static 'js/graphs.js'%}" type="text/javascript"></script>
+    -->
+
+{% block extrahead %}{% endblock %}
+</head>
+
+<body>
+
+
+<!-- EVERYTING BELOW IS THE MAIN CONTENT -->
+
+{%  block  maincontent %}
+{% endblock %}
+   <!-- START FOOTER -->
+   {% block footer %}
+    <div id="footer" class="grid_12">
+     <p>&copy; Copyright 2012 Chrimatos Technology Co.,Ltd.</p>
+    </div>
+    <!-- END FOOTER -->
+    {% endblock %}
+</body>
+</html>
+{% block javascript %}
+{% endblock %}

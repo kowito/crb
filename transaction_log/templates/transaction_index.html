@@ -1,0 +1,85 @@
+{% extends "base_transaction_template.html" %}
+{% load i18n pagination_tags%}
+
+{%  block  maincontent %}
+<h1>{% trans "Transaction Log"%}</h1>
+<div class="clearfix"></div>
+<div class="container_12">
+    <div class="grid_9">
+        <div class="table-header button-height"></div>
+        <table class="table responsive-table responsive-table-on">
+            <tr>
+                <th>{% trans "Student"%}</th>
+                <th>{% trans "Room"%}</th>
+                <th>{% trans "Time"%}</th>
+
+            </tr>
+
+            {% autopaginate transaction_log_list 20 %}
+
+            {% for transaction in transaction_log_list %}
+            <tr>
+                <td><a href="{% url transaction_log_detail transaction.id %}">{{transaction.get_people}}</a></td>
+                <td>{{transaction.device}}</td>
+                <td>{{transaction.timestamp}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="table-footer button-height large-margin-bottom"></div>
+    </div>
+
+    <div class="grid_3">
+    <details class="details margin-bottom" open="">
+        <summary role="button" aria-expanded="true">{% trans 'Search'%}</summary>
+        <div class="with-padding">
+            <form action="{% url transaction_log_index %}" method="POST">{% csrf_token %}
+                <label for="search_box">{% trans "Search"%}</label>
+                <input name='search_box' id='search_box' type="text" class="input"/>
+                <label for="start_date">Start Date</label>
+                <input type="text" name="datepicker" id="start_date" class="input" value="">
+                <label for="end_date">End Date</label>
+                <input type="text" name="datepicker" id="end_date" class="input" value="">
+                <input type="submit" class="submit" value="{% trans 'Search'%}">
+            </form>
+        </div>
+    </details>
+
+    <details class="details margin-bottom" open="">
+        <summary role="button" aria-expanded="true">{% trans 'Filter'%}</summary>
+        <div class="with-padding">
+        <ul>
+            <li>{% trans 'By Room' %}
+                <ul>
+                    {% for room in room_list %}
+                    <li><a href="?room={{room.id}}">{{room}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+
+            <li>{% trans 'By Device' %}
+                <ul>
+                    {% for device in device_list %}
+                    <li><a href="?device={{device.id}}">{{device}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </details>
+
+    <p class="button-height">
+        <a href="{% url transaction_log_create_url %}" class="button">
+            <span class="button-icon"><span class="icon-star"></span></span>
+            {% trans "Add Transaction" %}
+        </a>
+    </p>
+    </div>
+</div>
+
+
+<div class='clearfix'>&nbsp;</div>
+<div class='container_12'>
+    {% paginate %}
+</div>
+
+{% endblock %}

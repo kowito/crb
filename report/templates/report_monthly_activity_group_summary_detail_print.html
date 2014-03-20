@@ -1,0 +1,18 @@
+{% extends "base_report_template_print.html" %}
+{% load i18n webdesign staticfiles %}
+{% load reporttags %}
+
+
+{% block extrahead %}
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+
+{%  block  maincontent %}
+        
+        <div class="clearfix">&nbsp;</div>
+        <table width="100%" class="table responsive-table responsive-table-on">
+            {{report_table|safe|escape}}
+        </table>
+{% endblock%}

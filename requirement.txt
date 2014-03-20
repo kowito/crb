@@ -1,0 +1,16 @@
+Django==1.4.1
+Pillow==1.7.7
+South==0.7.6
+django-grappelli==2.4.1
+django-pagination==1.0.7
+
+-e git+git://github.com/avidal/django-pyodbc.git#egg=django-pyodbc
+-e git+git://github.com/django-mptt/django-mptt.git#egg=django-mptt
+
+python-dateutil==1.5
+pyodbc==3.0.6
+six==1.2.0
+vobject==0.8.1c
+wsgiref==0.1.2
+gunicorn==0.14.6
+

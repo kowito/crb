@@ -1,0 +1,84 @@
+
+
+{% extends 'holiday/holiday/base.html' %}
+
+{% load i18n %}
+
+{% block filename %}
+  /home/kowito/Project/crb/holiday/templates/holiday/holiday/holiday_detail.html
+{% endblock %}
+
+{% block title %}
+  {% trans "Holiday Detail" %}
+{% endblock %}
+
+
+{% block breadcrumbs %}
+  <ul class='breadcrumb'>
+    <li>
+      <a href='{% url holiday_holiday_archive_index %}'>
+        {% trans "Archive Index" %}
+      </a>
+      <span class='divider'>
+        /
+      </span>
+    </li>
+    <li>
+      <a href='{% url holiday_holiday_year_archive year=object.start_date.year %}'>
+        {% trans "Year Archive" %}
+      </a>
+      <span class='divider'>
+        /
+      </span>
+    </li>
+    <li>
+      <a href='{% url holiday_holiday_month_archive year=object.start_date.year month=object.start_date.month %}'>
+        {% trans "Month Archive" %}
+      </a>
+      <span class='divider'>
+        /
+      </span>
+    </li>
+    <li>
+      <a href='{% url holiday_holiday_day_archive year=object.start_date.year month=object.start_date.month day=object.start_date.day %}'>
+        {% trans "Day Archive" %}
+      </a>
+      <span class='divider'>
+        /
+      </span>
+    </li>
+    <li>
+      <a href='{% url holiday_holiday_date_detail year=object.start_date.year month=object.start_date.month day=object.start_date.day pk=object.pk %}'>
+        {% trans "Date Detail" %}
+      </a>
+    </li>
+  </ul>
+{% endblock %}
+
+
+{% block header-link %}
+  <a href='{{ object.get_absolute_url }}'>
+    {% trans "Holiday Detail" %}
+  </a>
+{% endblock %}
+
+{% block header-description %}
+  {% trans "A page representing an individual object." %}
+{% endblock %}
+
+{% block content %}
+  {% include 'holiday/holiday/object_table_detail.html' %}
+  <form action='{% url holiday_holiday_delete pk=object.pk %}' charset='utf-8' method='post'>
+    <fieldset>
+      {% csrf_token %}
+      <div class='form-actions'>
+        <a class='btn btn-success' href='{% url holiday_holiday_update pk=object.pk %}'>
+          {% trans "Update" %}
+        </a>
+        <button class='btn btn-danger' type='submit'>
+          {% trans "ลบ" %}
+        </button>
+      </div>
+    </fieldset>
+  </form>
+{% endblock %}

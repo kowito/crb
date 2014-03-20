@@ -1,0 +1,28 @@
+{% extends "base_room_template.html" %}
+{% load i18n webdesign pagination_tags %}
+
+{%  block  maincontent %}
+<h1>{% trans page_info.title %} <a href='/room/{{model_type}}/add'>+</a></h1>
+	  <div class="container_12">
+
+        {% autopaginate room_list 10 %}
+        <div class="box-warp">
+        <table width="100%">
+            <tr>
+                <th>{% trans "Name"%}</th>
+                <th>{% trans "Floor"%}</th>
+            </tr>
+            {% for room in room_list%}
+            <tr>
+                <td>{{room.name}}</td>
+                <td>{{room.floor}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        </div>
+{% paginate %}
+        Showing <span>{{ room_list.start_index }}</span> - <span>{{ room_list.end_index }}</span> of <span>{{ room_list.count }}</span> results
+      </div>
+
+{% endblock%}

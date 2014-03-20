@@ -1,0 +1,45 @@
+{% extends "base_staff_template.html" %}
+{% load i18n webdesign pagination_tags%}
+
+{%  block  maincontent %}
+
+  <div class="container_12">
+  <div class="clearfix">&nbsp;</div>
+    <div class="block margin-bottom">
+      <h3 class="block-title">{{page_info.title|capfirst }}</h3>
+      <div class="with-padding">
+        <ul>
+          <li>{% trans 'Name' %} : {{people.title}}.{{people.name_th}} {{people.lastname_th}}</li>
+          <li>{% trans 'Gender' %} : {{people.get_gender_display}}</li>
+          <li>{% trans 'Email' %} : {{people.email}}</li>
+        </ul>
+      </div>
+    </div>
+
+      <!-- user transaction -->
+    <div class="clearfix">&nbsp;</div>
+
+    <div class="table-header button-height"> Transaction Detail </div>
+    <table class="table responsive-table responsive-table-on">
+      <thead>
+        <tr>
+          <th>{% trans 'Event' %}</th>
+          <th>{% trans 'Date' %}</th>
+          <th>{% trans 'Time' %}</th>
+          <th>{% trans 'Check In' %}</th>
+          <th>{% trans 'Check Out' %}</th>
+          <th>{% trans 'Status' %}</th>
+        </tr>
+      </thead>
+      {% for tx in transaction_list %}
+      <tr>
+        <td><a href="{{tx.activity.get_absolute_url}}">{{tx.activity}}</a></td>
+        <td>{{tx.activity.date}}</td>
+        <td>{{tx.activity.start_time}}-{{tx.activity.end_time}}</td>
+        <td>{{tx.check_in}}</td>
+        <td>{{tx.check_out}}</td>
+        <td><small class="tag {{tx.tx_bg_color}}">{{tx.get_transaction_status_display}}</small></td>
+      </tr>
+      {% endfor %}
+    </table>
+{% endblock%}

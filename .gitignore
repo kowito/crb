@@ -1,0 +1,7 @@
+.DS_Store
+*.pyc
+crb/static_root/*
+*.komodoproject
+*.xcworkspace
+/localsettings.py
+*.db

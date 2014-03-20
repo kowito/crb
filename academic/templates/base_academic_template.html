@@ -1,0 +1,17 @@
+{% extends "base_template.html" %}
+{% load i18n %}
+
+{% block nav_course %}<li><a href="/academic/course" class="active">{% trans 'Course'%}</a></li>{% endblock%}
+
+{%  block  subnav %}
+    <ul>
+        <li><a href="{% url course_dashboard %}" class="{% if page_info.home_tab%}sub_nav_active{% endif %}">{% trans 'Course Summary'%}</a></li>
+        <li><a href="{% url academic_yeay_list %}" class="{% if page_info.academic_year_tab%}sub_nav_active{% endif %}">Academic year</a></li>
+        <li><a href="{% url semester_list %}" class="{% if page_info.semester_tab%}sub_nav_active{% endif %}">Semester</a></li>
+
+        <li><a href="{% url course_list %}" class="{% if page_info.course_tab%}sub_nav_active{% endif %}">Course</a></li>
+        <li><a href="{% url schoolroom_list %}" class="{% if page_info.schoolroom_tab%}sub_nav_active{% endif %}">Schoolroom</a></li>
+        <li><a href="{% url section_list %}" class="{% if page_info.section_tab%}sub_nav_active{% endif %}">Section</a></li>
+
+    </ul>
+{% endblock%}

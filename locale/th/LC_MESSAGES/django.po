@@ -1,0 +1,1594 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-07 14:05+0700\n"
+"PO-Revision-Date: 2012-11-07 04:40+0700\n"
+"Last-Translator: Kowit C. <kowit.s.c@gmail.com>\n"
+"Language-Team: Thai <kowit.s.c@gmail.com>\n"
+"Language: th_TH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: academic/admin.py:40 academic/templates/course_index.html:8
+#: staff/models.py:63 transaction_log/templates/transaction_index.html:12
+msgid "Student"
+msgstr "นักเรียน"
+
+#: academic/admin.py:42
+#, fuzzy
+msgid "Advanced options"
+msgstr "ตัวเลือกเพิ่มเติม"
+
+#: academic/models.py:21
+msgid "academic year"
+msgstr "ปีการศึกษา"
+
+#: academic/models.py:35
+msgid "semester"
+msgstr "ภาคการศึกษา"
+
+#: academic/models.py:49 academic/templates/academic_index.html:7
+#: academic/templates/academic_index.html:27
+#: academic/templates/base_academic_template.html:4
+#: academic/templates/course_list.html:5
+#: academic/templates/schoolroom_list.html:13
+#: crb/templates/base_template.html:91
+msgid "Course"
+msgstr "รายวิชา"
+
+#: academic/models.py:56
+msgid "start date"
+msgstr "วันที่เริ่ม"
+
+#: academic/models.py:57
+msgid "end date"
+msgstr "วันที่จบ"
+
+#: academic/models.py:64
+msgid "Schoolroom"
+msgstr "ห้องเรียน"
+
+#: academic/models.py:76
+msgid "title"
+msgstr "หัวข้อ"
+
+#: academic/models.py:77
+#, fuzzy
+msgid "slug"
+msgstr "Slug %r ไม่ได้ลงทะเบียน"
+
+#: academic/models.py:78
+msgid "description"
+msgstr "รายละเอียด"
+
+#: academic/models.py:82 activity/models.py:85
+msgid "instructor"
+msgstr "ผู้สอน"
+
+#: academic/models.py:85
+msgid "add date"
+msgstr "วันที่เพิ่ม"
+
+#: academic/models.py:86
+#, fuzzy
+msgid "modification date"
+msgstr "วันไหนก็ได้"
+
+#: academic/models.py:88
+#, fuzzy
+msgid "publication date"
+msgstr "วันไหนก็ได้"
+
+#: academic/models.py:89
+msgid "publish"
+msgstr ""
+
+#: academic/models.py:92
+msgid "section"
+msgstr ""
+
+#: academic/models.py:93
+msgid "sections"
+msgstr ""
+
+#: academic/models.py:95
+#, fuzzy
+msgid "Change instructor"
+msgstr "เปลี่ยนแปลงประวัติ: %s"
+
+#: academic/models.py:98
+#, fuzzy, python-format
+msgid "%(title)s on %(instructor)s"
+msgstr "ดูที่หน้าเว็บ"
+
+#: academic/models.py:116
+msgid "day"
+msgstr "วัน"
+
+#: academic/models.py:117
+msgid "start time"
+msgstr "เวลาเริ่ม"
+
+#: academic/models.py:118
+msgid "end time"
+msgstr "เวลาจบ"
+
+#: academic/extra/fields.py:6
+msgid "Sunday"
+msgstr "อาทิตย์"
+
+#: academic/extra/fields.py:7
+msgid "Monday"
+msgstr "จันทร์"
+
+#: academic/extra/fields.py:8
+msgid "Tuesday"
+msgstr "อังคาร"
+
+#: academic/extra/fields.py:9
+msgid "Wednesday"
+msgstr "พุธ"
+
+#: academic/extra/fields.py:10
+msgid "Thursday"
+msgstr "พฤหัสบดี"
+
+#: academic/extra/fields.py:11
+msgid "Friday"
+msgstr "ศุกร์"
+
+#: academic/extra/fields.py:12
+msgid "Saturday"
+msgstr "เสาร์"
+
+#: academic/templates/academic_index.html:5
+#: academic/templates/base_academic_template.html:8
+msgid "Course Summary"
+msgstr "รายวิชา"
+
+#: academic/templates/academic_index.html:10
+#: academic/templates/academic_list.html:10
+#: academic/templates/course_list.html:11
+#: activity/templates/activity_detail.html:33
+#: report/templates/report_monthly_student_index.html:17
+#: room/templates/device.html:17 staff/templates/staff_index.html:11
+msgid "Code"
+msgstr ""
+
+#: academic/templates/academic_index.html:11
+#: academic/templates/academic_index.html:62
+#: academic/templates/academic_list.html:12
+#: academic/templates/course_index.html:25
+#: academic/templates/course_list.html:12
+#: academic/templates/semester_list.html:11
+#: activity/templates/activity_detail.html:35
+#: debug_toolbar/templates/debug_toolbar/panels/versions.html:5
+#: report/templates/report_monthly_student_index.html:19
+#: room/templates/device.html:16 room/templates/room_room_lists.html:12
+#: staff/templates/staff_detail.html:12 staff/templates/staff_index.html:13
+#: staff/templates/staff_list.html:13
+msgid "Name"
+msgstr "ชื่อ"
+
+#: academic/templates/academic_index.html:23
+#: academic/templates/schoolroom_list.html:5
+#: academic/templates/schoolroom_list.html:11
+msgid "School Room"
+msgstr "ห้องบรรยาย"
+
+#: academic/templates/academic_index.html:26
+#: academic/templates/academic_index.html:59
+#: academic/templates/schoolroom_list.html:12
+#: academic/templates/semester_list.html:5
+msgid "Semester"
+msgstr "ภาคการศึกษา"
+
+#: academic/templates/academic_index.html:43
+#: academic/templates/section_list.html:5
+msgid "Section"
+msgstr ""
+
+#: academic/templates/academic_index.html:46
+#: academic/templates/academic_list.html:11
+#: academic/templates/section_list.html:11
+#: activity/templates/activity_detail.html:34
+#: report/templates/report_monthly_student_index.html:18
+#: staff/templates/staff_index.html:12 staff/templates/staff_list.html:12
+msgid "Title"
+msgstr "หัวข้อ"
+
+#: academic/templates/academic_index.html:47
+#: academic/templates/section_list.html:12
+#: activity/templates/activity_detail.html:18
+msgid "Description"
+msgstr "รายละเอียด"
+
+#: academic/templates/academic_index.html:63
+msgid "Academic Year"
+msgstr "ปีการศึกษา"
+
+#: academic/templates/academic_list.html:13
+#: activity/templates/activity_detail.html:36
+#: report/templates/report_monthly_student_index.html:20
+#: staff/templates/staff_index.html:14 staff/templates/staff_list.html:14
+msgid "Lastname"
+msgstr "นามสกุล"
+
+#: academic/templates/academic_list.html:14
+#: activity/templates/activity_detail.html:37
+msgid "gender"
+msgstr "เพศ"
+
+#: academic/templates/academic_list.html:15
+#, fuzzy
+msgid "fingerprint_code"
+msgstr "ใส่รหัสที่ไปรษณีย์ให้ถูกต้อง"
+
+#: academic/templates/academic_model_lists.html:16
+#: crb/templates/@admin/object_history.html:32
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:22
+#: room/templates/device.html:18 room/templates/room_model_lists.html:14
+msgid "Action"
+msgstr "คำสั่ง"
+
+#: academic/templates/academic_modify_template.html:46
+#: activity/templates/activity_create_form.html:17
+#: activity/templates/activity_group_create_form.html:17
+#: room/templates/ajax_modify_room_template.html:35
+#: room/templates/ajax_modify_template.html:29
+#: room/templates/modify_template.html:50
+#: staff/templates/modify_template.html:13
+#: transaction_log/templates/transaction_create_form.html:12
+#: transaction_log/templates/transaction_update_form.html:12
+msgid "Save"
+msgstr "บันทึก"
+
+#: academic/templates/academic_year_list.html:5
+#, fuzzy
+msgid "Academic Years"
+msgstr "ปีการศึกษา"
+
+#: academic/templates/academic_year_list.html:11
+#: academic/templates/semester_list.html:12
+msgid "Year"
+msgstr ""
+
+#: academic/templates/academic_year_list.html:12
+msgid "Start"
+msgstr ""
+
+#: academic/templates/academic_year_list.html:13
+msgid "End"
+msgstr ""
+
+#: academic/templates/course_index.html:5
+msgid "Course "
+msgstr "รายวิชา"
+
+#: academic/templates/course_index.html:9
+msgid "Teacher"
+msgstr "ผู้สอน"
+
+#: academic/templates/course_index.html:19
+msgid "Academic"
+msgstr "เกี่ยวกับสถาบันการศึกษา"
+
+#: academic/templates/course_index.html:26
+#: room/templates/room_room_lists.html:13
+msgid "Floor"
+msgstr "ชั้น"
+
+#: academic/templates/course_index.html:27
+msgid "Building"
+msgstr "อาคาร"
+
+#: academic/templates/course_index.html:28
+msgid "FP Device"
+msgstr "เครื่องอ่านลายนิ้วมือ"
+
+#: academic/templates/schoolroom_list.html:14
+msgid "Section Round"
+msgstr ""
+
+#: academic/templates/schoolroom_list.html:15
+#, fuzzy
+msgid "Start date"
+msgstr "วันที่เริ่ม"
+
+#: academic/templates/schoolroom_list.html:16
+msgid "End Date"
+msgstr ""
+
+#: academic/templates/section_list.html:13
+#, fuzzy
+msgid "Create date"
+msgstr "ดูที่หน้าเว็บ"
+
+#: academic/templates/schedule/base_schedule.html:4
+#: academic/templates/schedule/base_schedule.html:8
+msgid "Schedule"
+msgstr "ตารางเรียน"
+
+#: activity/models.py:84
+#, fuzzy
+msgid "student"
+msgstr "นักเรียน"
+
+#: activity/templates/activity_create_form.html:9
+#, fuzzy
+msgid "Create Activity"
+msgstr "ดูที่หน้าเว็บ"
+
+#: activity/templates/activity_detail.html:9
+#: activity/templates/calendar_index.html:8
+#, fuzzy
+msgid "Schudule"
+msgstr "ตารางเรียน"
+
+#: activity/templates/activity_detail.html:14
+#: report/templates/report_index.html:15
+#: report/templates/report_monthly_activity_group_index.html:14
+msgid "Class Monthly Report"
+msgstr ""
+
+#: activity/templates/activity_detail.html:17
+#: report/templates/report_monthly_activity_group_detail.html:18
+#: report/templates/report_monthly_student_detail.html:18
+#: staff/templates/staff_detail.html:27
+#, fuzzy
+msgid "Date"
+msgstr "วันที่/เวลา"
+
+#: activity/templates/activity_detail.html:21
+#: report/templates/report_monthly_activity_group_detail.html:21
+msgid "OK"
+msgstr ""
+
+#: activity/templates/activity_detail.html:22
+#: report/templates/report_monthly_activity_group_detail.html:22
+msgid "Late"
+msgstr ""
+
+#: activity/templates/activity_detail.html:23
+msgid "Missing"
+msgstr ""
+
+#: activity/templates/activity_detail.html:24
+msgid "Invalid"
+msgstr ""
+
+#: activity/templates/activity_detail.html:38
+msgid "Checkin Time"
+msgstr ""
+
+#: activity/templates/activity_detail.html:39
+#, fuzzy
+msgid "Checkout Time"
+msgstr "เวลารวม"
+
+#: activity/templates/activity_detail.html:40
+#: report/templates/report_monthly_student_detail.html:22
+#: staff/templates/staff_detail.html:31
+#, fuzzy
+msgid "Status"
+msgstr "สถานะของพนักงาน"
+
+#: activity/templates/activity_detail.html:60
+msgid "Event did not occur."
+msgstr ""
+
+#: activity/templates/activity_group_create_form.html:9
+msgid "Create Activity Group"
+msgstr ""
+
+#: activity/templates/base_activity_template.html:8
+#: activity/templates/base_activity_template.html:12
+#: crb/templates/base_template.html:89
+msgid "Calendar"
+msgstr ""
+
+#: crb/dashboard.py:48
+msgid "AppList: Applications"
+msgstr ""
+
+#: crb/dashboard.py:58
+#, fuzzy
+msgid "ModelList: Administration"
+msgstr "การจัดการ Django"
+
+#: crb/dashboard.py:81
+msgid "Support"
+msgstr "สนับสนุน"
+
+#: crb/dashboard.py:85
+#, fuzzy
+msgid "Django Documentation"
+msgstr "Documentation bookmarklets"
+
+#: crb/dashboard.py:90
+#, fuzzy
+msgid "Grappelli Documentation"
+msgstr "Documentation bookmarklets"
+
+#: crb/dashboard.py:95
+#, fuzzy
+msgid "Grappelli Google-Code"
+msgstr "ใส่รหัสที่ไปรษณีย์ให้ถูกต้อง"
+
+#: crb/dashboard.py:104
+#, fuzzy
+msgid "Latest Django News"
+msgstr "ผู้ดูแลระบบ Django"
+
+#: crb/dashboard.py:112 crb/templates/@admin/index.html:53
+msgid "Recent Actions"
+msgstr "คำสั่งที่ผ่านมา"
+
+#: crb/templates/account_settings.html:3 crb/templates/home/index.html:3
+#: crb/templates/registration/login.html:3
+msgid "Dashboard"
+msgstr ""
+
+#: crb/templates/account_settings.html:7
+msgid "Account Settings"
+msgstr "ตั้งค่าบัญชี"
+
+#: crb/templates/account_settings.html:10
+msgid "Profile"
+msgstr ""
+
+#: crb/templates/account_settings.html:16
+#, fuzzy
+msgid "Access log"
+msgstr "เข้าสู่ระบบ"
+
+#: crb/templates/base_template.html:7 crb/templates/@admin/base.html:9
+msgid "University Time Attendenced System"
+msgstr "ระบบลงเวลามหาวิทยาลับ"
+
+#: crb/templates/base_template.html:62
+msgid "Time<span>Attendance</span>"
+msgstr "ระบบ<span>ลงเวลา</span>"
+
+#: crb/templates/base_template.html:72
+msgid "Signed in as "
+msgstr "ลงชื่อใช้เป็น"
+
+#: crb/templates/base_template.html:73
+msgid "System Setting"
+msgstr "ตั้งค่าระบบ"
+
+#: crb/templates/base_template.html:74
+msgid "Sign Out"
+msgstr "ออกจากระบบ"
+
+#: crb/templates/base_template.html:77
+msgid "Welcome, new user. "
+msgstr ""
+
+#: crb/templates/base_template.html:77
+msgid "Please log in."
+msgstr ""
+
+#: crb/templates/base_template.html:93 staff/models.py:48
+#: staff/templates/base_staff_template.html:3
+msgid "Staff"
+msgstr "บุคลากร"
+
+#: crb/templates/base_template.html:94
+#: transaction_log/templates/transaction_index.html:5
+#, fuzzy
+msgid "Transaction Log"
+msgstr "เข้าสู่ระบบ"
+
+#: crb/templates/base_template.html:96
+#: room/templates/base_room_template.html:3 room/templates/building.html:6
+#: room/templates/device.html:5 room/templates/floor.html:5
+#: staff/templates/modify_template.html:5
+msgid "Conferance Rooms"
+msgstr "ห้องบรรยาย"
+
+#: crb/templates/base_template.html:98
+#: report/templates/base_report_template.html:3
+#: report/templates/base_report_template.html:6
+#: report/templates/report_index.html:11
+#: report/templates/report_monthly_activity_group_detail.html:11
+#: report/templates/report_monthly_activity_group_index.html:11
+#: report/templates/report_monthly_student_detail.html:11
+#: report/templates/report_monthly_student_index.html:11
+msgid "Report"
+msgstr "รายงาน"
+
+#: crb/templates/@admin/app_index.html:11 crb/templates/@admin/base.html:93
+#: crb/templates/@admin/change_form.html:26
+#: crb/templates/@admin/change_list.html:46
+#: crb/templates/@admin/object_history.html:11
+#, fuzzy
+msgid "Home"
+msgstr "หน้าหลัก"
+
+#: crb/templates/@admin/app_index.html:14 crb/templates/@admin/index.html:19
+#, fuzzy, python-format
+msgid "%(name)s"
+msgstr "%(name)s"
+
+#: crb/templates/@admin/base.html:53
+msgid "Welcome,"
+msgstr "ยินดีต้อนรับ,"
+
+#: crb/templates/@admin/base.html:57
+msgid "Documentation"
+msgstr "เอกสารประกอบ"
+
+#: crb/templates/@admin/base.html:59
+msgid "Change password"
+msgstr "เปลี่ยนรหัสผ่าน"
+
+#: crb/templates/@admin/base.html:60
+msgid "Log out"
+msgstr "ออกจากระบบ"
+
+#: crb/templates/@admin/change_form.html:29 crb/templates/@admin/index.html:29
+msgid "Add"
+msgstr "เพิ่ม"
+
+#: crb/templates/@admin/change_form.html:44
+#: crb/templates/@admin/object_history.html:15
+msgid "History"
+msgstr "ประวัติ"
+
+#: crb/templates/@admin/change_form.html:45
+#, fuzzy
+msgid "View on site"
+msgstr "ดูที่หน้าเว็บ"
+
+#: crb/templates/@admin/change_form.html:56
+#: crb/templates/@admin/change_list.html:75
+#, fuzzy
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "โปรดแก้ไขข้อผิดพลาดด้านล่าง"
+
+#: crb/templates/@admin/change_list.html:66
+#, fuzzy, python-format
+msgid "Add %(name)s"
+msgstr "เพิ่ม %(name)s"
+
+#: crb/templates/@admin/change_list.html:86
+#: transaction_log/templates/transaction_index.html:51
+msgid "Filter"
+msgstr "ตัวกรอง"
+
+#: crb/templates/@admin/index.html:18
+#, fuzzy, python-format
+msgid "Models available in the %(name)s application."
+msgstr "โมเดลใช้ได้ในแอป %(name)s ."
+
+#: crb/templates/@admin/index.html:35
+msgid "Change"
+msgstr "เปลี่ยนแปลง"
+
+#: crb/templates/@admin/index.html:45
+msgid "You don't have permission to edit anything."
+msgstr "คุณไม่สิทธิ์ในการเปลี่ยนแปลงข้อมูลใดๆ ได้"
+
+#: crb/templates/@admin/index.html:57
+msgid "None available"
+msgstr "ไม่ว่าง"
+
+#: crb/templates/@admin/index.html:71
+msgid "Unknown content"
+msgstr "ไม่ทราบเนื้อหา"
+
+#: crb/templates/@admin/object_history.html:30
+msgid "Date/time"
+msgstr "วันที่/เวลา"
+
+#: crb/templates/@admin/object_history.html:31
+#, fuzzy
+msgid "User"
+msgstr "ผู้ใช้"
+
+#: crb/templates/@admin/object_history.html:46
+#, fuzzy
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr "อ็อบเจ็กต์นี้ไม่ได้แก้ไขประวัติ เป็นไปได้ว่ามันอาจจะไม่ได้ถูกเพิ่มเข้าไปโดยระบบ"
+
+#: crb/templates/pagination/pagination.html:5
+#: crb/templates/pagination/pagination.html:7
+msgid "previous"
+msgstr "ก่อนหน้า"
+
+#: crb/templates/pagination/pagination.html:21
+#: crb/templates/pagination/pagination.html:23
+msgid "next"
+msgstr "ถัดไป"
+
+#: debug_toolbar/panels/cache.py:184
+msgid "Cache"
+msgstr "แคช"
+
+#: debug_toolbar/panels/cache.py:188
+#, python-format
+msgid "%(cache_calls)d call in %(time).2fms"
+msgid_plural "%(cache_calls)d calls in %(time).2fms"
+msgstr[0] ""
+
+#: debug_toolbar/panels/cache.py:195
+#, python-format
+msgid "Cache calls from %(count)d backend"
+msgid_plural "Cache calls from %(count)d backends"
+msgstr[0] ""
+
+#: debug_toolbar/panels/headers.py:37 debug_toolbar/panels/headers.py:40
+msgid "HTTP Headers"
+msgstr ""
+
+#: debug_toolbar/panels/logger.py:117
+msgid "Logging"
+msgstr ""
+
+#: debug_toolbar/panels/logger.py:122
+#, fuzzy, python-format
+msgid "%(count)s message"
+msgid_plural "%(count)s messages"
+msgstr[0] "เปลี่ยนข้อความ"
+
+#: debug_toolbar/panels/logger.py:126
+#, fuzzy
+msgid "Log Messages"
+msgstr "เข้าสู่ระบบ"
+
+#: debug_toolbar/panels/profiling.py:149 debug_toolbar/panels/profiling.py:155
+msgid "Profiling"
+msgstr ""
+
+#: debug_toolbar/panels/request_vars.py:18
+#: debug_toolbar/panels/request_vars.py:21
+msgid "Request Vars"
+msgstr ""
+
+#: debug_toolbar/panels/request_vars.py:36
+#, fuzzy
+msgid "<no view>"
+msgstr "ไม่มีหน้า '%s'"
+
+#: debug_toolbar/panels/request_vars.py:48
+msgid "<unavailable>"
+msgstr ""
+
+#: debug_toolbar/panels/settings_vars.py:18
+msgid "Settings"
+msgstr "ตั้งค่า"
+
+#: debug_toolbar/panels/settings_vars.py:21
+#, fuzzy, python-format
+msgid "Settings from <code>%s</code>"
+msgstr "เอาออกจาก sorting"
+
+#: debug_toolbar/panels/signals.py:40 debug_toolbar/panels/signals.py:58
+msgid "Signals"
+msgstr "สัญญาณ"
+
+#: debug_toolbar/panels/signals.py:49
+#, python-format
+msgid "%(num_receivers)d receiver of 1 signal"
+msgid_plural "%(num_receivers)d receivers of 1 signal"
+msgstr[0] ""
+
+#: debug_toolbar/panels/signals.py:52
+#, python-format
+msgid "%(num_receivers)d receiver of %(num_signals)d signals"
+msgid_plural "%(num_receivers)d receivers of %(num_signals)d signals"
+msgstr[0] ""
+
+#: debug_toolbar/panels/sql.py:33
+msgid "Autocommit"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:34
+msgid "Read uncommitted"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:35
+msgid "Read committed"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:36
+msgid "Repeatable read"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:37
+msgid "Serializable"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:48
+msgid "Idle"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:49
+msgid "Active"
+msgstr "ใช้งานได้"
+
+#: debug_toolbar/panels/sql.py:50
+#, fuzzy
+msgid "In transaction"
+msgstr "เข้าสู่ระบบ"
+
+#: debug_toolbar/panels/sql.py:51
+#, fuzzy
+msgid "In error"
+msgstr "เกิดความผิดพลาดที่ฐานข้อมูล"
+
+#: debug_toolbar/panels/sql.py:52
+msgid "Unknown"
+msgstr "ไม่รู้"
+
+#: debug_toolbar/panels/sql.py:118
+msgid "SQL"
+msgstr ""
+
+#: debug_toolbar/panels/template.py:102
+#, fuzzy
+msgid "Templates"
+msgstr "Templates"
+
+#: debug_toolbar/panels/template.py:106
+#, python-format
+msgid "Templates (%(num_templates)s rendered)"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:58
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:7
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:11
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:12
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:11
+#: report/templates/report_monthly_student_detail.html:19
+#: staff/templates/staff_detail.html:28
+#: transaction_log/templates/transaction_index.html:14
+msgid "Time"
+msgstr "เวลา"
+
+#: debug_toolbar/panels/timer.py:66
+#, python-format
+msgid "CPU: %(cum)0.2fms (%(total)0.2fms)"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:71
+#, fuzzy, python-format
+msgid "TOTAL: %0.2fms"
+msgstr "%(total_count)s ได้ถูกเลือก"
+
+#: debug_toolbar/panels/timer.py:74
+msgid "Resource Usage"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:85
+#, fuzzy
+msgid "User CPU time"
+msgstr "System CPU time"
+
+#: debug_toolbar/panels/timer.py:85
+#, python-format
+msgid "%(utime)0.3f msec"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:86
+msgid "System CPU time"
+msgstr "System CPU time"
+
+#: debug_toolbar/panels/timer.py:86
+#, python-format
+msgid "%(stime)0.3f msec"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:87
+#, fuzzy
+msgid "Total CPU time"
+msgstr "System CPU time"
+
+#: debug_toolbar/panels/timer.py:87
+#, fuzzy, python-format
+msgid "%(total)0.3f msec"
+msgstr "%(total_count)s ได้ถูกเลือก"
+
+#: debug_toolbar/panels/timer.py:88
+#, fuzzy
+msgid "Elapsed time"
+msgstr "วันที่/เวลา"
+
+#: debug_toolbar/panels/timer.py:88
+#, python-format
+msgid "%(total_time)0.3f msec"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:89
+msgid "Context switches"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:89
+#, python-format
+msgid "%(vcsw)d voluntary, %(ivcsw)d involuntary"
+msgstr ""
+
+#: debug_toolbar/panels/version.py:20 debug_toolbar/panels/version.py:29
+msgid "Versions"
+msgstr "รุ่น"
+
+#: debug_toolbar/templates/debug_toolbar/base.html:11
+msgid "Hide Toolbar"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/base.html:11
+msgid "Hide"
+msgstr "ซ่อน"
+
+#: debug_toolbar/templates/debug_toolbar/base.html:36
+#, fuzzy
+msgid "Show Toolbar"
+msgstr "แสดงทั้งหมด"
+
+#: debug_toolbar/templates/debug_toolbar/base.html:42
+msgid "Close"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/redirect.html:7
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:10
+msgid "Location"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/redirect.html:9
+msgid ""
+"The Django Debug Toolbar has intercepted a redirect to the above URL for "
+"debug viewing purposes.  You can click the above link to continue with the "
+"redirect as normal.  If you'd like to disable this feature, set the "
+"<code>DEBUG_TOOLBAR_CONFIG</code> dictionary's key "
+"<code>INTERCEPT_REDIRECTS</code> to <code>False</code>."
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:2
+msgid "Summary"
+msgstr "ผลรวม"
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:6
+#, fuzzy
+msgid "Total Calls"
+msgstr "%(total_count)s ได้ถูกเลือก"
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:7
+msgid "Total Time"
+msgstr "เวลารวม"
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:8
+#, fuzzy
+msgid "Cache Hits"
+msgstr "ไม่พบแคช"
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:9
+msgid "Cache Misses"
+msgstr "ไม่พบแคช"
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:21
+msgid "Commands"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:39
+msgid "Calls"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:43
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:21
+#, fuzzy
+msgid "Time (ms)"
+msgstr "วันที่/เวลา"
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:44
+msgid "Type"
+msgstr "ชนิด"
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:45
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:9
+msgid "args"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:46
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:10
+msgid "kwargs"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:47
+msgid "Backend"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/headers.html:5
+msgid "Key"
+msgstr "คีย์"
+
+#: debug_toolbar/templates/debug_toolbar/panels/headers.html:6
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:41
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:67
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:89
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:111
+#: debug_toolbar/templates/debug_toolbar/panels/settings_vars.html:6
+#: debug_toolbar/templates/debug_toolbar/panels/timer.html:10
+#: holiday/templates/holiday/holiday/object_table_detail.html:12
+msgid "Value"
+msgstr "ค่า"
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:6
+msgid "Level"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:8
+msgid "Channel"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:9
+msgid "Message"
+msgstr "ข้อความ"
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:26
+#, fuzzy
+msgid "No messages logged"
+msgstr "ไม่ระบุวัน"
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:6
+msgid "Call"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:7
+msgid "CumTime"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:8
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:10
+msgid "Per"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:9
+msgid "TotTime"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:11
+msgid "Count"
+msgstr "นับ"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:3
+#, fuzzy
+msgid "View information"
+msgstr "ดูที่หน้าเว็บ"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:7
+#, fuzzy
+msgid "View Function"
+msgstr "ดูที่หน้าเว็บ"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:8
+msgid "URL Name"
+msgstr "ชื่อ URL"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:31
+msgid "COOKIES Variables"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:40
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:66
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:88
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:110
+msgid "Variable"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:54
+#, fuzzy
+msgid "No COOKIE data"
+msgstr "ไม่ระบุวัน"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:57
+#, fuzzy
+msgid "SESSION Variables"
+msgstr "ข้อมูลเซสชัน"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:80
+#, fuzzy
+msgid "No SESSION data"
+msgstr "ไม่ระบุวัน"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:83
+msgid "GET Variables"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:102
+#, fuzzy
+msgid "No GET data"
+msgstr "ไม่ระบุวัน"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:105
+#, fuzzy
+msgid "POST Variables"
+msgstr "โพสต์ความคิดเห็นของคุณ"
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:124
+#, fuzzy
+msgid "No POST data"
+msgstr "โพสต์ความคิดเห็นของคุณ"
+
+#: debug_toolbar/templates/debug_toolbar/panels/settings_vars.html:5
+msgid "Setting"
+msgstr "ตั้งค่าระบบ"
+
+#: debug_toolbar/templates/debug_toolbar/panels/signals.html:5
+msgid "Signal"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/signals.html:6
+msgid "Providing Args"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/signals.html:7
+msgid "Receivers"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:8
+#, python-format
+msgid "%(num)s query"
+msgid_plural "%(num)s queries"
+msgstr[0] ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:19
+msgid "Query"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:20
+msgid "Timeline"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:59
+msgid "Connection:"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:61
+msgid "Isolation level:"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:64
+#, fuzzy
+msgid "Transaction status:"
+msgstr "สถานะของพนักงาน"
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:78
+msgid "(unknown)"
+msgstr "(ไม่รู้)"
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:87
+msgid "No SQL queries were recorded during this request."
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:3
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:3
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:3
+#: debug_toolbar/templates/debug_toolbar/panels/template_source.html:3
+msgid "Back"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:4
+msgid "SQL Explained"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:9
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:10
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:9
+msgid "Executed SQL"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:13
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:14
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:13
+msgid "Database"
+msgstr "ฐานข้อมูล"
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:4
+msgid "SQL Profiled"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:37
+msgid "Error"
+msgstr "ผิดพลาด"
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:4
+#, fuzzy
+msgid "SQL Selected"
+msgstr "เลือก 0 จาก %(cnt)s"
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:36
+#, fuzzy
+msgid "Empty set"
+msgstr "หน้า %s ที่ว่างเปล่า"
+
+#: debug_toolbar/templates/debug_toolbar/panels/template_source.html:4
+#, fuzzy
+msgid "Template Source"
+msgstr "ชื่อเทมเพลต"
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:2
+#, fuzzy
+msgid "Template path"
+msgid_plural "Template paths"
+msgstr[0] "ตำแหน่งไฟล์"
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:10
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:28
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:43
+msgid "None"
+msgstr "ไม่มี"
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:13
+msgid "Template"
+msgid_plural "Templates"
+msgstr[0] "เทมเพลต"
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:21
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:37
+#, fuzzy
+msgid "Toggle Context"
+msgstr "เปิด/ปิด sorting"
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:31
+msgid "Context processor"
+msgid_plural "Context processors"
+msgstr[0] ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/timer.html:9
+msgid "Resource"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/versions.html:6
+msgid "Version"
+msgstr "รุ่น"
+
+#: holiday/templates/holiday/holiday/base.html:9
+#, fuzzy
+msgid "Django Scaffold"
+msgstr "การจัดการ Django"
+
+#: holiday/templates/holiday/holiday/base.html:659
+#: holiday/templates/holiday/holiday/holiday_list.html:23
+msgid "Holidays"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:669
+msgid "Views"
+msgstr "วิว"
+
+#: holiday/templates/holiday/holiday/base.html:673
+#, fuzzy
+msgid "List View"
+msgstr "รายชื่ออาคาร"
+
+#: holiday/templates/holiday/holiday/base.html:678
+#, fuzzy
+msgid "Create View"
+msgstr "ดูที่หน้าเว็บ"
+
+#: holiday/templates/holiday/holiday/base.html:684
+#, fuzzy
+msgid "Detail View"
+msgstr "ดูที่หน้าเว็บ"
+
+#: holiday/templates/holiday/holiday/base.html:689
+#, fuzzy
+msgid "Update View"
+msgstr "ดูที่หน้าเว็บ"
+
+#: holiday/templates/holiday/holiday/base.html:694
+#, fuzzy
+msgid "Delete View"
+msgstr "ดูที่หน้าเว็บ"
+
+#: holiday/templates/holiday/holiday/base.html:700
+#, fuzzy
+msgid "Date-based Views"
+msgstr "วันที่ (พร้อมด้วยเวลา)"
+
+#: holiday/templates/holiday/holiday/base.html:704
+#: holiday/templates/holiday/holiday/holiday_archive.html:17
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:17
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:14
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:15
+#: holiday/templates/holiday/holiday/holiday_detail.html:20
+#, fuzzy
+msgid "Archive Index"
+msgstr "ดัชนีของ %(directory)s"
+
+#: holiday/templates/holiday/holiday/base.html:709
+#, fuzzy
+msgid "Date Detail View"
+msgstr "ดูที่หน้าเว็บ"
+
+#: holiday/templates/holiday/holiday/base.html:739
+msgid ""
+"Presented to you by <a href='http://github.com/modocache/django-generate-"
+"scaffold'>django-generate-scaffold</a>."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:741
+msgid "Edit this template file in:"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive.html:11
+#: holiday/templates/holiday/holiday/holiday_archive.html:24
+msgid "Holiday Archive Index"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive.html:28
+msgid "A top-level index page showing the latest objects, by date."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive.html:44
+#, fuzzy
+msgid "Recent Holidays"
+msgstr "คำสั่งที่ผ่านมา"
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:11
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:48
+#, fuzzy
+msgid "Holiday Day Archive"
+msgstr "ไม่ระบุวัน"
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:25
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:22
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:23
+#: holiday/templates/holiday/holiday/holiday_detail.html:28
+#, fuzzy
+msgid "Year Archive"
+msgstr "ปีการศึกษา"
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:33
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:30
+#: holiday/templates/holiday/holiday/holiday_detail.html:36
+#, fuzzy
+msgid "Month Archive"
+msgstr "เดือนนี้"
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:41
+#: holiday/templates/holiday/holiday/holiday_detail.html:44
+#, fuzzy
+msgid "Day Archive"
+msgstr "ไม่ระบุวัน"
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:56
+#, python-format
+msgid ""
+"\n"
+"      Holidays created on %(day)s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:37
+#, fuzzy
+msgid "Holiday Month Archive"
+msgstr "ไม่ระบุเดือน"
+
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:41
+msgid "A monthly archive page showing all objects in a given month."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:57
+#, python-format
+msgid ""
+"\n"
+"      Holidays created in the month of %(month|date:\"M Y\")s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:12
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:16
+#, fuzzy
+msgid "Holiday Week Archive"
+msgstr "ไม่ระบุสัปดาห์"
+
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:20
+msgid "A weekly archive page showing all objects in a given week."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:25
+#, python-format
+msgid ""
+"\n"
+"      Holidays created during the week beginning on %(week)s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:31
+#, fuzzy
+msgid "Holiday Year Archive"
+msgstr "ไม่ระบุปี"
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:35
+msgid "A yearly archive page showing all available months in a given year."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:39
+#, fuzzy
+msgid "By Month"
+msgstr "เดือนนี้"
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:51
+#, python-format
+msgid ""
+"\n"
+"      Holidays created in the year %(year)s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:12
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:17
+#, fuzzy
+msgid "Holiday Confirm Delete"
+msgstr "ไม่สามารถลบ %(name)s"
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:22
+msgid ""
+"A view that displays a confirmation page (on GET) and deletes an existing "
+"object (on POST)."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:27
+#, fuzzy
+msgid "Delete this Holiday?"
+msgstr "ปักธงความคิดเห็นนี้"
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:36
+#: holiday/templates/holiday/holiday/holiday_detail.html:79
+msgid "ลบ"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:12
+#: holiday/templates/holiday/holiday/holiday_detail.html:61
+msgid "Holiday Detail"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:52
+#, fuzzy
+msgid "Date Detail"
+msgstr "วันไหนก็ได้"
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:66
+msgid "A page representing an individual object."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:76
+#: holiday/templates/holiday/holiday/holiday_form.html:47
+msgid "Update"
+msgstr "ปรับปรุง"
+
+#: holiday/templates/holiday/holiday/holiday_form.html:13
+msgid "Update Holiday"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:15
+#, fuzzy
+msgid "Create a New Holiday"
+msgstr "ใส่รหัสผ่านใหม่"
+
+#: holiday/templates/holiday/holiday/holiday_form.html:22
+msgid "Holiday Update"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:26
+msgid "Holiday Create"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:33
+msgid "A view that displays a form for editing an existing object."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:35
+msgid "A view that displays a form for creating an object."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:49
+msgid "Create"
+msgstr "สร้าง"
+
+#: holiday/templates/holiday/holiday/holiday_list.html:13
+msgid "Holiday List"
+msgstr "รายชื่อวันหยุด"
+
+#: holiday/templates/holiday/holiday/holiday_list.html:18
+msgid "A page representing a list of objects."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/object_table_detail.html:9
+#, fuzzy
+msgid "Field"
+msgstr "ฟิลด์ข้อมูล: %(field_type)s"
+
+#: holiday/templates/holiday/holiday/object_table_list.html:6
+msgid "Click on the primary key value to access the individual Holiday's page."
+msgstr ""
+
+#: report/templates/report_index.html:28
+msgid "Student Monthly Report"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_detail.html:17
+#: report/templates/report_monthly_student_detail.html:17
+#: staff/templates/staff_detail.html:26
+msgid "Event"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_detail.html:19
+#, fuzzy
+msgid "Start Time"
+msgstr "เวลาเริ่ม"
+
+#: report/templates/report_monthly_activity_group_detail.html:20
+#, fuzzy
+msgid "End Time"
+msgstr "เวลา"
+
+#: report/templates/report_monthly_activity_group_detail.html:23
+msgid "Miss"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_index.html:20
+msgid "All activity"
+msgstr ""
+
+#: report/templates/report_monthly_student_detail.html:20
+#: staff/templates/staff_detail.html:29
+msgid "Check In"
+msgstr ""
+
+#: report/templates/report_monthly_student_detail.html:21
+#: staff/templates/staff_detail.html:30
+msgid "Check Out"
+msgstr ""
+
+#: report/templates/report_monthly_student_index.html:13
+msgid "Student monthly report"
+msgstr ""
+
+#: report/templates/report_monthly_student_index.html:21
+msgid "Citizen id"
+msgstr ""
+
+#: report/templates/report_monthly_student_index.html:22
+#: staff/templates/staff_detail.html:14 staff/templates/staff_index.html:15
+#: staff/templates/staff_list.html:15
+msgid "Email"
+msgstr ""
+
+#: room/templates/ajax_modify_room_template.html:23
+msgid "Room Management"
+msgstr "จัดการห้อง"
+
+#: room/templates/building.html:10
+msgid "Building List"
+msgstr "รายชื่ออาคาร"
+
+#: room/templates/device.html:9
+msgid "Device List"
+msgstr "รายชื่ออุปกรณ์"
+
+#: room/templates/modify_template.html:17
+msgid "Name :"
+msgstr "ชื่อ :"
+
+#: room/templates/modify_template.html:22
+msgid "Floor :"
+msgstr "ชั้น :"
+
+#: room/templates/modify_template.html:26
+msgid "Status :"
+msgstr "สถานะของพนักงาน"
+
+#: room/templates/modify_template.html:36 room/templates/room_index.html:23
+msgid "Device"
+msgstr "อุปกรณ์"
+
+#: room/templates/room_index.html:8
+msgid "Conferance Room"
+msgstr "ห้องบรรยาย"
+
+#: staff/models.py:77
+msgid "Instructor"
+msgstr "ผู้สอน"
+
+#: staff/templates/staff_detail.html:9
+#, fuzzy
+msgid "Student Detail"
+msgstr "วันไหนก็ได้"
+
+#: staff/templates/staff_detail.html:13 staff/templates/staff_index.html:16
+#: staff/templates/staff_list.html:16
+msgid "Gender"
+msgstr "เพศ"
+
+#: staff/templates/staff_index.html:5
+msgid "Staff "
+msgstr "บุคลากร"
+
+#: transaction_log/templates/base_transaction_template.html:3
+#: transaction_log/templates/base_transaction_template.html:7
+#, fuzzy
+msgid "Transaction Management"
+msgstr "จัดการห้อง"
+
+#: transaction_log/templates/transaction_create_form.html:4
+#: transaction_log/templates/transaction_success.html:4
+#: transaction_log/templates/transaction_update_form.html:4
+#, fuzzy
+msgid "Manual Transaction"
+msgstr "เข้าสู่ระบบ"
+
+#: transaction_log/templates/transaction_detail.html:7
+#, fuzzy
+msgid "Transaction formation"
+msgstr "เข้าสู่ระบบ"
+
+#: transaction_log/templates/transaction_index.html:13
+msgid "Room"
+msgstr "ห้อง"
+
+#: transaction_log/templates/transaction_index.html:36
+#: transaction_log/templates/transaction_index.html:39
+#: transaction_log/templates/transaction_index.html:45
+msgid "Search"
+msgstr ""
+
+#: transaction_log/templates/transaction_index.html:54
+#, fuzzy
+msgid "By Room"
+msgstr "ห้อง"
+
+#: transaction_log/templates/transaction_index.html:62
+#, fuzzy
+msgid "By Device"
+msgstr "อุปกรณ์"
+
+#: transaction_log/templates/transaction_index.html:76
+#, fuzzy
+msgid "Add Transaction"
+msgstr "เข้าสู่ระบบ"
+
+#: transaction_log/templates/transaction_success.html:9
+msgid "Success"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Fingerprint Code"
+#~ msgstr "ใส่รหัสที่ไปรษณีย์ให้ถูกต้อง"
+
+#, fuzzy
+#~ msgid "Transaction Type"
+#~ msgstr "%(number)d %(type)s"
+
+#~ msgid "Class"
+#~ msgstr "ห้องเรียน"
+
+#~ msgid "Class Round"
+#~ msgstr "รอบชั้นเรียน"
+
+#~ msgid "Class Rounds"
+#~ msgstr "รอบชั้นเรียน"
+
+#~ msgid "Conferrance Rooms"
+#~ msgstr "ห้องบรรยาย"
+
+#~ msgid "Room List"
+#~ msgstr "รายการห้อง"
+
+#~ msgid "Rooms"
+#~ msgstr "ห้อง"

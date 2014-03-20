@@ -1,0 +1,17 @@
+{% extends "base_transaction_template.html" %}
+{% load i18n %}
+{%  block  maincontent %}
+<h1>{% trans "Manual Transaction"%}</h1>
+
+<div class="container_12">
+    <div class="block margin-bottom">
+    <div class="block-title green-gradient glossy"></div>
+        <form action="{% url transaction_log_update_url form %}" method="POST">{% csrf_token %}
+        <div class="with-padding">
+            {{form.as_p}}
+            <button type="submit" class="button green-gradient">{% trans 'Save' %}</button>
+        </div>
+        </form>
+    </div>
+</div>
+{%  endblock %}

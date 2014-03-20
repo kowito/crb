@@ -1,0 +1,26 @@
+{% extends "base_academic_template.html" %}
+{% load i18n webdesign%}
+
+{%  block  maincontent %}
+<h1>{% trans 'Course'%}
+<a href ="{% url academic_add_model 'course' %}"> + </a>
+</h1>
+  <div class="container_12 box-warp">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th scope="col">{% trans 'Code' %}</th>
+            <th scope="col">{% trans 'Name' %}</th>
+
+
+        </tr>
+
+        {% for  course in course_list%}
+        <tr>
+            <td scope="col"><a href ="{% url academic_modify_model 'course' course.id %}">{{course.code}}</a></td>
+            <td scope="col">{{course.name}}</td>
+        </tr>
+        {% endfor%}
+
+    </table>
+  </div>
+{% endblock%}

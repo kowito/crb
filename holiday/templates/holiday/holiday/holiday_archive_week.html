@@ -1,0 +1,31 @@
+
+
+{% extends 'holiday/holiday/base.html' %}
+
+{% load i18n %}
+
+{% block filename %}
+  /home/kowito/Project/crb/holiday/templates/holiday/holiday/holiday_archive_week.html
+{% endblock %}
+
+{% block title %}
+  {% trans "Holiday Week Archive" %}
+{% endblock %}
+
+{% block header-link %}
+  {% trans "Holiday Week Archive" %}
+{% endblock %}
+
+{% block header-description %}
+  {% trans "A weekly archive page showing all objects in a given week." %}
+{% endblock %}
+
+{% block content %}
+  <h2>
+    {% blocktrans %}
+      Holidays created during the week beginning on {{ week }}
+    {% endblocktrans %}
+  </h2>
+  {% include 'holiday/holiday/object_table_list.html' %}
+  {% include 'holiday/holiday/pagination.html' %}
+{% endblock %}

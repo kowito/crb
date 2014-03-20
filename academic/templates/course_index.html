@@ -1,0 +1,47 @@
+{% extends "base_staff_template.html" %}
+{% load i18n webdesign%}
+
+{%  block  maincontent %}
+<h1>{% trans  'Course '%}</h1>
+<div id="icondock" class="grid_8">
+      <ul>
+            <li><a href="/staff/student/" rel="tipsy" title="Staff"><img src="/media/images/icondock/user.png" alt="Student"><br>{% trans 'Student' %}</a></li>
+            <li><a href="/staff/teacher/" rel="tipsy" title="Staff"><img src="/media/images/icondock/user.png" alt="Teacher"><br>{% trans 'Teacher' %}</a></li>
+	  </ul>
+	</div>
+
+    <div class="clearfix">&nbsp;</div>
+    <div class="container_12">
+            <p>
+                 {% lorem p%}
+            </p>
+    <div class="clearfix">&nbsp;</div>
+    <h3>{% trans 'Academic'%}</h3>
+    <div class="clearfix">&nbsp;</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th width="5%" scope="col">
+            <input type="checkbox" name="checkbox" id="checkbox" class="checkall" /><label for="checkbox"></label></th>
+            <th scope="col">{% trans 'Name' %}</th>
+            <th scope="col">{% trans 'Floor' %}</th>
+            <th scope="col">{% trans 'Building' %}</th>
+            <th scope="col">{% trans 'FP Device' %}</th>
+        </tr>
+        {% for  room in rool_list%}
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox{{room.id}}" id="checkbox{{room.id}}" /></td>
+            <td scope="col">{{room.name}}</td>
+            <td scope="col">{{room.floor}}</td>
+            <td scope="col">{{room.floor.building}}</td>
+            <td scope="col">
+                <ul>
+                    {% for fp in room.device.all %}
+                    <li>{{fp}}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        {% endfor%}
+
+    </table>
+{% endblock%}

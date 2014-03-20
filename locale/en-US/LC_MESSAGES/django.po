@@ -1,0 +1,1491 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-07 14:05+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: academic/admin.py:40 academic/templates/course_index.html:8
+#: staff/models.py:63 transaction_log/templates/transaction_index.html:12
+msgid "Student"
+msgstr ""
+
+#: academic/admin.py:42
+msgid "Advanced options"
+msgstr ""
+
+#: academic/models.py:21
+msgid "academic year"
+msgstr ""
+
+#: academic/models.py:35
+msgid "semester"
+msgstr ""
+
+#: academic/models.py:49 academic/templates/academic_index.html:7
+#: academic/templates/academic_index.html:27
+#: academic/templates/base_academic_template.html:4
+#: academic/templates/course_list.html:5
+#: academic/templates/schoolroom_list.html:13
+#: crb/templates/base_template.html:91
+msgid "Course"
+msgstr ""
+
+#: academic/models.py:56
+msgid "start date"
+msgstr ""
+
+#: academic/models.py:57
+msgid "end date"
+msgstr ""
+
+#: academic/models.py:64
+msgid "Schoolroom"
+msgstr ""
+
+#: academic/models.py:76
+msgid "title"
+msgstr ""
+
+#: academic/models.py:77
+msgid "slug"
+msgstr ""
+
+#: academic/models.py:78
+msgid "description"
+msgstr ""
+
+#: academic/models.py:82 activity/models.py:85
+msgid "instructor"
+msgstr ""
+
+#: academic/models.py:85
+msgid "add date"
+msgstr ""
+
+#: academic/models.py:86
+msgid "modification date"
+msgstr ""
+
+#: academic/models.py:88
+msgid "publication date"
+msgstr ""
+
+#: academic/models.py:89
+msgid "publish"
+msgstr ""
+
+#: academic/models.py:92
+msgid "section"
+msgstr ""
+
+#: academic/models.py:93
+msgid "sections"
+msgstr ""
+
+#: academic/models.py:95
+msgid "Change instructor"
+msgstr ""
+
+#: academic/models.py:98
+#, python-format
+msgid "%(title)s on %(instructor)s"
+msgstr ""
+
+#: academic/models.py:116
+msgid "day"
+msgstr ""
+
+#: academic/models.py:117
+msgid "start time"
+msgstr ""
+
+#: academic/models.py:118
+msgid "end time"
+msgstr ""
+
+#: academic/extra/fields.py:6
+msgid "Sunday"
+msgstr ""
+
+#: academic/extra/fields.py:7
+msgid "Monday"
+msgstr ""
+
+#: academic/extra/fields.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: academic/extra/fields.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: academic/extra/fields.py:10
+msgid "Thursday"
+msgstr ""
+
+#: academic/extra/fields.py:11
+msgid "Friday"
+msgstr ""
+
+#: academic/extra/fields.py:12
+msgid "Saturday"
+msgstr ""
+
+#: academic/templates/academic_index.html:5
+#: academic/templates/base_academic_template.html:8
+msgid "Course Summary"
+msgstr ""
+
+#: academic/templates/academic_index.html:10
+#: academic/templates/academic_list.html:10
+#: academic/templates/course_list.html:11
+#: activity/templates/activity_detail.html:33
+#: report/templates/report_monthly_student_index.html:17
+#: room/templates/device.html:17 staff/templates/staff_index.html:11
+msgid "Code"
+msgstr ""
+
+#: academic/templates/academic_index.html:11
+#: academic/templates/academic_index.html:62
+#: academic/templates/academic_list.html:12
+#: academic/templates/course_index.html:25
+#: academic/templates/course_list.html:12
+#: academic/templates/semester_list.html:11
+#: activity/templates/activity_detail.html:35
+#: debug_toolbar/templates/debug_toolbar/panels/versions.html:5
+#: report/templates/report_monthly_student_index.html:19
+#: room/templates/device.html:16 room/templates/room_room_lists.html:12
+#: staff/templates/staff_detail.html:12 staff/templates/staff_index.html:13
+#: staff/templates/staff_list.html:13
+msgid "Name"
+msgstr ""
+
+#: academic/templates/academic_index.html:23
+#: academic/templates/schoolroom_list.html:5
+#: academic/templates/schoolroom_list.html:11
+msgid "School Room"
+msgstr ""
+
+#: academic/templates/academic_index.html:26
+#: academic/templates/academic_index.html:59
+#: academic/templates/schoolroom_list.html:12
+#: academic/templates/semester_list.html:5
+msgid "Semester"
+msgstr ""
+
+#: academic/templates/academic_index.html:43
+#: academic/templates/section_list.html:5
+msgid "Section"
+msgstr ""
+
+#: academic/templates/academic_index.html:46
+#: academic/templates/academic_list.html:11
+#: academic/templates/section_list.html:11
+#: activity/templates/activity_detail.html:34
+#: report/templates/report_monthly_student_index.html:18
+#: staff/templates/staff_index.html:12 staff/templates/staff_list.html:12
+msgid "Title"
+msgstr ""
+
+#: academic/templates/academic_index.html:47
+#: academic/templates/section_list.html:12
+#: activity/templates/activity_detail.html:18
+msgid "Description"
+msgstr ""
+
+#: academic/templates/academic_index.html:63
+msgid "Academic Year"
+msgstr ""
+
+#: academic/templates/academic_list.html:13
+#: activity/templates/activity_detail.html:36
+#: report/templates/report_monthly_student_index.html:20
+#: staff/templates/staff_index.html:14 staff/templates/staff_list.html:14
+msgid "Lastname"
+msgstr ""
+
+#: academic/templates/academic_list.html:14
+#: activity/templates/activity_detail.html:37
+msgid "gender"
+msgstr ""
+
+#: academic/templates/academic_list.html:15
+msgid "fingerprint_code"
+msgstr ""
+
+#: academic/templates/academic_model_lists.html:16
+#: crb/templates/@admin/object_history.html:32
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:22
+#: room/templates/device.html:18 room/templates/room_model_lists.html:14
+msgid "Action"
+msgstr ""
+
+#: academic/templates/academic_modify_template.html:46
+#: activity/templates/activity_create_form.html:17
+#: activity/templates/activity_group_create_form.html:17
+#: room/templates/ajax_modify_room_template.html:35
+#: room/templates/ajax_modify_template.html:29
+#: room/templates/modify_template.html:50
+#: staff/templates/modify_template.html:13
+#: transaction_log/templates/transaction_create_form.html:12
+#: transaction_log/templates/transaction_update_form.html:12
+msgid "Save"
+msgstr ""
+
+#: academic/templates/academic_year_list.html:5
+msgid "Academic Years"
+msgstr ""
+
+#: academic/templates/academic_year_list.html:11
+#: academic/templates/semester_list.html:12
+msgid "Year"
+msgstr ""
+
+#: academic/templates/academic_year_list.html:12
+msgid "Start"
+msgstr ""
+
+#: academic/templates/academic_year_list.html:13
+msgid "End"
+msgstr ""
+
+#: academic/templates/course_index.html:5
+msgid "Course "
+msgstr ""
+
+#: academic/templates/course_index.html:9
+msgid "Teacher"
+msgstr ""
+
+#: academic/templates/course_index.html:19
+msgid "Academic"
+msgstr ""
+
+#: academic/templates/course_index.html:26
+#: room/templates/room_room_lists.html:13
+msgid "Floor"
+msgstr ""
+
+#: academic/templates/course_index.html:27
+msgid "Building"
+msgstr ""
+
+#: academic/templates/course_index.html:28
+msgid "FP Device"
+msgstr ""
+
+#: academic/templates/schoolroom_list.html:14
+msgid "Section Round"
+msgstr ""
+
+#: academic/templates/schoolroom_list.html:15
+msgid "Start date"
+msgstr ""
+
+#: academic/templates/schoolroom_list.html:16
+msgid "End Date"
+msgstr ""
+
+#: academic/templates/section_list.html:13
+msgid "Create date"
+msgstr ""
+
+#: academic/templates/schedule/base_schedule.html:4
+#: academic/templates/schedule/base_schedule.html:8
+msgid "Schedule"
+msgstr ""
+
+#: activity/models.py:84
+msgid "student"
+msgstr ""
+
+#: activity/templates/activity_create_form.html:9
+msgid "Create Activity"
+msgstr ""
+
+#: activity/templates/activity_detail.html:9
+#: activity/templates/calendar_index.html:8
+msgid "Schudule"
+msgstr ""
+
+#: activity/templates/activity_detail.html:14
+#: report/templates/report_index.html:15
+#: report/templates/report_monthly_activity_group_index.html:14
+msgid "Class Monthly Report"
+msgstr ""
+
+#: activity/templates/activity_detail.html:17
+#: report/templates/report_monthly_activity_group_detail.html:18
+#: report/templates/report_monthly_student_detail.html:18
+#: staff/templates/staff_detail.html:27
+msgid "Date"
+msgstr ""
+
+#: activity/templates/activity_detail.html:21
+#: report/templates/report_monthly_activity_group_detail.html:21
+msgid "OK"
+msgstr ""
+
+#: activity/templates/activity_detail.html:22
+#: report/templates/report_monthly_activity_group_detail.html:22
+msgid "Late"
+msgstr ""
+
+#: activity/templates/activity_detail.html:23
+msgid "Missing"
+msgstr ""
+
+#: activity/templates/activity_detail.html:24
+msgid "Invalid"
+msgstr ""
+
+#: activity/templates/activity_detail.html:38
+msgid "Checkin Time"
+msgstr ""
+
+#: activity/templates/activity_detail.html:39
+msgid "Checkout Time"
+msgstr ""
+
+#: activity/templates/activity_detail.html:40
+#: report/templates/report_monthly_student_detail.html:22
+#: staff/templates/staff_detail.html:31
+msgid "Status"
+msgstr ""
+
+#: activity/templates/activity_detail.html:60
+msgid "Event did not occur."
+msgstr ""
+
+#: activity/templates/activity_group_create_form.html:9
+msgid "Create Activity Group"
+msgstr ""
+
+#: activity/templates/base_activity_template.html:8
+#: activity/templates/base_activity_template.html:12
+#: crb/templates/base_template.html:89
+msgid "Calendar"
+msgstr ""
+
+#: crb/dashboard.py:48
+msgid "AppList: Applications"
+msgstr ""
+
+#: crb/dashboard.py:58
+msgid "ModelList: Administration"
+msgstr ""
+
+#: crb/dashboard.py:81
+msgid "Support"
+msgstr ""
+
+#: crb/dashboard.py:85
+msgid "Django Documentation"
+msgstr ""
+
+#: crb/dashboard.py:90
+msgid "Grappelli Documentation"
+msgstr ""
+
+#: crb/dashboard.py:95
+msgid "Grappelli Google-Code"
+msgstr ""
+
+#: crb/dashboard.py:104
+msgid "Latest Django News"
+msgstr ""
+
+#: crb/dashboard.py:112 crb/templates/@admin/index.html:53
+msgid "Recent Actions"
+msgstr ""
+
+#: crb/templates/account_settings.html:3 crb/templates/home/index.html:3
+#: crb/templates/registration/login.html:3
+msgid "Dashboard"
+msgstr ""
+
+#: crb/templates/account_settings.html:7
+msgid "Account Settings"
+msgstr ""
+
+#: crb/templates/account_settings.html:10
+msgid "Profile"
+msgstr ""
+
+#: crb/templates/account_settings.html:16
+msgid "Access log"
+msgstr ""
+
+#: crb/templates/base_template.html:7 crb/templates/@admin/base.html:9
+msgid "University Time Attendenced System"
+msgstr ""
+
+#: crb/templates/base_template.html:62
+msgid "Time<span>Attendance</span>"
+msgstr ""
+
+#: crb/templates/base_template.html:72
+msgid "Signed in as "
+msgstr ""
+
+#: crb/templates/base_template.html:73
+msgid "System Setting"
+msgstr ""
+
+#: crb/templates/base_template.html:74
+msgid "Sign Out"
+msgstr ""
+
+#: crb/templates/base_template.html:77
+msgid "Welcome, new user. "
+msgstr ""
+
+#: crb/templates/base_template.html:77
+msgid "Please log in."
+msgstr ""
+
+#: crb/templates/base_template.html:93 staff/models.py:48
+#: staff/templates/base_staff_template.html:3
+msgid "Staff"
+msgstr ""
+
+#: crb/templates/base_template.html:94
+#: transaction_log/templates/transaction_index.html:5
+msgid "Transaction Log"
+msgstr ""
+
+#: crb/templates/base_template.html:96
+#: room/templates/base_room_template.html:3 room/templates/building.html:6
+#: room/templates/device.html:5 room/templates/floor.html:5
+#: staff/templates/modify_template.html:5
+msgid "Conferance Rooms"
+msgstr ""
+
+#: crb/templates/base_template.html:98
+#: report/templates/base_report_template.html:3
+#: report/templates/base_report_template.html:6
+#: report/templates/report_index.html:11
+#: report/templates/report_monthly_activity_group_detail.html:11
+#: report/templates/report_monthly_activity_group_index.html:11
+#: report/templates/report_monthly_student_detail.html:11
+#: report/templates/report_monthly_student_index.html:11
+msgid "Report"
+msgstr ""
+
+#: crb/templates/@admin/app_index.html:11 crb/templates/@admin/base.html:93
+#: crb/templates/@admin/change_form.html:26
+#: crb/templates/@admin/change_list.html:46
+#: crb/templates/@admin/object_history.html:11
+msgid "Home"
+msgstr ""
+
+#: crb/templates/@admin/app_index.html:14 crb/templates/@admin/index.html:19
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: crb/templates/@admin/base.html:53
+msgid "Welcome,"
+msgstr ""
+
+#: crb/templates/@admin/base.html:57
+msgid "Documentation"
+msgstr ""
+
+#: crb/templates/@admin/base.html:59
+msgid "Change password"
+msgstr ""
+
+#: crb/templates/@admin/base.html:60
+msgid "Log out"
+msgstr ""
+
+#: crb/templates/@admin/change_form.html:29 crb/templates/@admin/index.html:29
+msgid "Add"
+msgstr ""
+
+#: crb/templates/@admin/change_form.html:44
+#: crb/templates/@admin/object_history.html:15
+msgid "History"
+msgstr ""
+
+#: crb/templates/@admin/change_form.html:45
+msgid "View on site"
+msgstr ""
+
+#: crb/templates/@admin/change_form.html:56
+#: crb/templates/@admin/change_list.html:75
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: crb/templates/@admin/change_list.html:66
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: crb/templates/@admin/change_list.html:86
+#: transaction_log/templates/transaction_index.html:51
+msgid "Filter"
+msgstr ""
+
+#: crb/templates/@admin/index.html:18
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr ""
+
+#: crb/templates/@admin/index.html:35
+msgid "Change"
+msgstr ""
+
+#: crb/templates/@admin/index.html:45
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: crb/templates/@admin/index.html:57
+msgid "None available"
+msgstr ""
+
+#: crb/templates/@admin/index.html:71
+msgid "Unknown content"
+msgstr ""
+
+#: crb/templates/@admin/object_history.html:30
+msgid "Date/time"
+msgstr ""
+
+#: crb/templates/@admin/object_history.html:31
+msgid "User"
+msgstr ""
+
+#: crb/templates/@admin/object_history.html:46
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: crb/templates/pagination/pagination.html:5
+#: crb/templates/pagination/pagination.html:7
+msgid "previous"
+msgstr ""
+
+#: crb/templates/pagination/pagination.html:21
+#: crb/templates/pagination/pagination.html:23
+msgid "next"
+msgstr ""
+
+#: debug_toolbar/panels/cache.py:184
+msgid "Cache"
+msgstr ""
+
+#: debug_toolbar/panels/cache.py:188
+#, python-format
+msgid "%(cache_calls)d call in %(time).2fms"
+msgid_plural "%(cache_calls)d calls in %(time).2fms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/panels/cache.py:195
+#, python-format
+msgid "Cache calls from %(count)d backend"
+msgid_plural "Cache calls from %(count)d backends"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/panels/headers.py:37 debug_toolbar/panels/headers.py:40
+msgid "HTTP Headers"
+msgstr ""
+
+#: debug_toolbar/panels/logger.py:117
+msgid "Logging"
+msgstr ""
+
+#: debug_toolbar/panels/logger.py:122
+#, python-format
+msgid "%(count)s message"
+msgid_plural "%(count)s messages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/panels/logger.py:126
+msgid "Log Messages"
+msgstr ""
+
+#: debug_toolbar/panels/profiling.py:149 debug_toolbar/panels/profiling.py:155
+msgid "Profiling"
+msgstr ""
+
+#: debug_toolbar/panels/request_vars.py:18
+#: debug_toolbar/panels/request_vars.py:21
+msgid "Request Vars"
+msgstr ""
+
+#: debug_toolbar/panels/request_vars.py:36
+msgid "<no view>"
+msgstr ""
+
+#: debug_toolbar/panels/request_vars.py:48
+msgid "<unavailable>"
+msgstr ""
+
+#: debug_toolbar/panels/settings_vars.py:18
+msgid "Settings"
+msgstr ""
+
+#: debug_toolbar/panels/settings_vars.py:21
+#, python-format
+msgid "Settings from <code>%s</code>"
+msgstr ""
+
+#: debug_toolbar/panels/signals.py:40 debug_toolbar/panels/signals.py:58
+msgid "Signals"
+msgstr ""
+
+#: debug_toolbar/panels/signals.py:49
+#, python-format
+msgid "%(num_receivers)d receiver of 1 signal"
+msgid_plural "%(num_receivers)d receivers of 1 signal"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/panels/signals.py:52
+#, python-format
+msgid "%(num_receivers)d receiver of %(num_signals)d signals"
+msgid_plural "%(num_receivers)d receivers of %(num_signals)d signals"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/panels/sql.py:33
+msgid "Autocommit"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:34
+msgid "Read uncommitted"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:35
+msgid "Read committed"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:36
+msgid "Repeatable read"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:37
+msgid "Serializable"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:48
+msgid "Idle"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:49
+msgid "Active"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:50
+msgid "In transaction"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:51
+msgid "In error"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:52
+msgid "Unknown"
+msgstr ""
+
+#: debug_toolbar/panels/sql.py:118
+msgid "SQL"
+msgstr ""
+
+#: debug_toolbar/panels/template.py:102
+msgid "Templates"
+msgstr ""
+
+#: debug_toolbar/panels/template.py:106
+#, python-format
+msgid "Templates (%(num_templates)s rendered)"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:58
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:7
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:11
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:12
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:11
+#: report/templates/report_monthly_student_detail.html:19
+#: staff/templates/staff_detail.html:28
+#: transaction_log/templates/transaction_index.html:14
+msgid "Time"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:66
+#, python-format
+msgid "CPU: %(cum)0.2fms (%(total)0.2fms)"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:71
+#, python-format
+msgid "TOTAL: %0.2fms"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:74
+msgid "Resource Usage"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:85
+msgid "User CPU time"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:85
+#, python-format
+msgid "%(utime)0.3f msec"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:86
+msgid "System CPU time"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:86
+#, python-format
+msgid "%(stime)0.3f msec"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:87
+msgid "Total CPU time"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:87
+#, python-format
+msgid "%(total)0.3f msec"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:88
+msgid "Elapsed time"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:88
+#, python-format
+msgid "%(total_time)0.3f msec"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:89
+msgid "Context switches"
+msgstr ""
+
+#: debug_toolbar/panels/timer.py:89
+#, python-format
+msgid "%(vcsw)d voluntary, %(ivcsw)d involuntary"
+msgstr ""
+
+#: debug_toolbar/panels/version.py:20 debug_toolbar/panels/version.py:29
+msgid "Versions"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/base.html:11
+msgid "Hide Toolbar"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/base.html:11
+msgid "Hide"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/base.html:36
+msgid "Show Toolbar"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/base.html:42
+msgid "Close"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/redirect.html:7
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:10
+msgid "Location"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/redirect.html:9
+msgid ""
+"The Django Debug Toolbar has intercepted a redirect to the above URL for "
+"debug viewing purposes.  You can click the above link to continue with the "
+"redirect as normal.  If you'd like to disable this feature, set the "
+"<code>DEBUG_TOOLBAR_CONFIG</code> dictionary's key "
+"<code>INTERCEPT_REDIRECTS</code> to <code>False</code>."
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:2
+msgid "Summary"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:6
+msgid "Total Calls"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:7
+msgid "Total Time"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:8
+msgid "Cache Hits"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:9
+msgid "Cache Misses"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:21
+msgid "Commands"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:39
+msgid "Calls"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:43
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:21
+msgid "Time (ms)"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:44
+msgid "Type"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:45
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:9
+msgid "args"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:46
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:10
+msgid "kwargs"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/cache.html:47
+msgid "Backend"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/headers.html:5
+msgid "Key"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/headers.html:6
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:41
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:67
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:89
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:111
+#: debug_toolbar/templates/debug_toolbar/panels/settings_vars.html:6
+#: debug_toolbar/templates/debug_toolbar/panels/timer.html:10
+#: holiday/templates/holiday/holiday/object_table_detail.html:12
+msgid "Value"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:6
+msgid "Level"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:8
+msgid "Channel"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:9
+msgid "Message"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/logger.html:26
+msgid "No messages logged"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:6
+msgid "Call"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:7
+msgid "CumTime"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:8
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:10
+msgid "Per"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:9
+msgid "TotTime"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/profiling.html:11
+msgid "Count"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:3
+msgid "View information"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:7
+msgid "View Function"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:8
+msgid "URL Name"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:31
+msgid "COOKIES Variables"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:40
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:66
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:88
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:110
+msgid "Variable"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:54
+msgid "No COOKIE data"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:57
+msgid "SESSION Variables"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:80
+msgid "No SESSION data"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:83
+msgid "GET Variables"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:102
+msgid "No GET data"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:105
+msgid "POST Variables"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/request_vars.html:124
+msgid "No POST data"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/settings_vars.html:5
+msgid "Setting"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/signals.html:5
+msgid "Signal"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/signals.html:6
+msgid "Providing Args"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/signals.html:7
+msgid "Receivers"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:8
+#, python-format
+msgid "%(num)s query"
+msgid_plural "%(num)s queries"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:19
+msgid "Query"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:20
+msgid "Timeline"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:59
+msgid "Connection:"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:61
+msgid "Isolation level:"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:64
+msgid "Transaction status:"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:78
+msgid "(unknown)"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql.html:87
+msgid "No SQL queries were recorded during this request."
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:3
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:3
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:3
+#: debug_toolbar/templates/debug_toolbar/panels/template_source.html:3
+msgid "Back"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:4
+msgid "SQL Explained"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:9
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:10
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:9
+msgid "Executed SQL"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_explain.html:13
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:14
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:13
+msgid "Database"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:4
+msgid "SQL Profiled"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_profile.html:37
+msgid "Error"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:4
+msgid "SQL Selected"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/sql_select.html:36
+msgid "Empty set"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/template_source.html:4
+msgid "Template Source"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:2
+msgid "Template path"
+msgid_plural "Template paths"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:10
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:28
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:43
+msgid "None"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:13
+msgid "Template"
+msgid_plural "Templates"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:21
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:37
+msgid "Toggle Context"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/templates.html:31
+msgid "Context processor"
+msgid_plural "Context processors"
+msgstr[0] ""
+msgstr[1] ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/timer.html:9
+msgid "Resource"
+msgstr ""
+
+#: debug_toolbar/templates/debug_toolbar/panels/versions.html:6
+msgid "Version"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:9
+msgid "Django Scaffold"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:659
+#: holiday/templates/holiday/holiday/holiday_list.html:23
+msgid "Holidays"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:669
+msgid "Views"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:673
+msgid "List View"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:678
+msgid "Create View"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:684
+msgid "Detail View"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:689
+msgid "Update View"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:694
+msgid "Delete View"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:700
+msgid "Date-based Views"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:704
+#: holiday/templates/holiday/holiday/holiday_archive.html:17
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:17
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:14
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:15
+#: holiday/templates/holiday/holiday/holiday_detail.html:20
+msgid "Archive Index"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:709
+msgid "Date Detail View"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:739
+msgid ""
+"Presented to you by <a href='http://github.com/modocache/django-generate-"
+"scaffold'>django-generate-scaffold</a>."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/base.html:741
+msgid "Edit this template file in:"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive.html:11
+#: holiday/templates/holiday/holiday/holiday_archive.html:24
+msgid "Holiday Archive Index"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive.html:28
+msgid "A top-level index page showing the latest objects, by date."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive.html:44
+msgid "Recent Holidays"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:11
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:48
+msgid "Holiday Day Archive"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:25
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:22
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:23
+#: holiday/templates/holiday/holiday/holiday_detail.html:28
+msgid "Year Archive"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:33
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:30
+#: holiday/templates/holiday/holiday/holiday_detail.html:36
+msgid "Month Archive"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:41
+#: holiday/templates/holiday/holiday/holiday_detail.html:44
+msgid "Day Archive"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_day.html:56
+#, python-format
+msgid ""
+"\n"
+"      Holidays created on %(day)s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:37
+msgid "Holiday Month Archive"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:41
+msgid "A monthly archive page showing all objects in a given month."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_month.html:57
+#, python-format
+msgid ""
+"\n"
+"      Holidays created in the month of %(month|date:\"M Y\")s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:12
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:16
+msgid "Holiday Week Archive"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:20
+msgid "A weekly archive page showing all objects in a given week."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_week.html:25
+#, python-format
+msgid ""
+"\n"
+"      Holidays created during the week beginning on %(week)s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:31
+msgid "Holiday Year Archive"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:35
+msgid "A yearly archive page showing all available months in a given year."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:39
+msgid "By Month"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_archive_year.html:51
+#, python-format
+msgid ""
+"\n"
+"      Holidays created in the year %(year)s\n"
+"    "
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:12
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:17
+msgid "Holiday Confirm Delete"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:22
+msgid ""
+"A view that displays a confirmation page (on GET) and deletes an existing "
+"object (on POST)."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:27
+msgid "Delete this Holiday?"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_confirm_delete.html:36
+#: holiday/templates/holiday/holiday/holiday_detail.html:79
+msgid "ลบ"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:12
+#: holiday/templates/holiday/holiday/holiday_detail.html:61
+msgid "Holiday Detail"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:52
+msgid "Date Detail"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:66
+msgid "A page representing an individual object."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_detail.html:76
+#: holiday/templates/holiday/holiday/holiday_form.html:47
+msgid "Update"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:13
+msgid "Update Holiday"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:15
+msgid "Create a New Holiday"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:22
+msgid "Holiday Update"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:26
+msgid "Holiday Create"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:33
+msgid "A view that displays a form for editing an existing object."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:35
+msgid "A view that displays a form for creating an object."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_form.html:49
+msgid "Create"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_list.html:13
+msgid "Holiday List"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/holiday_list.html:18
+msgid "A page representing a list of objects."
+msgstr ""
+
+#: holiday/templates/holiday/holiday/object_table_detail.html:9
+msgid "Field"
+msgstr ""
+
+#: holiday/templates/holiday/holiday/object_table_list.html:6
+msgid "Click on the primary key value to access the individual Holiday's page."
+msgstr ""
+
+#: report/templates/report_index.html:28
+msgid "Student Monthly Report"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_detail.html:17
+#: report/templates/report_monthly_student_detail.html:17
+#: staff/templates/staff_detail.html:26
+msgid "Event"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_detail.html:19
+msgid "Start Time"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_detail.html:20
+msgid "End Time"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_detail.html:23
+msgid "Miss"
+msgstr ""
+
+#: report/templates/report_monthly_activity_group_index.html:20
+msgid "All activity"
+msgstr ""
+
+#: report/templates/report_monthly_student_detail.html:20
+#: staff/templates/staff_detail.html:29
+msgid "Check In"
+msgstr ""
+
+#: report/templates/report_monthly_student_detail.html:21
+#: staff/templates/staff_detail.html:30
+msgid "Check Out"
+msgstr ""
+
+#: report/templates/report_monthly_student_index.html:13
+msgid "Student monthly report"
+msgstr ""
+
+#: report/templates/report_monthly_student_index.html:21
+msgid "Citizen id"
+msgstr ""
+
+#: report/templates/report_monthly_student_index.html:22
+#: staff/templates/staff_detail.html:14 staff/templates/staff_index.html:15
+#: staff/templates/staff_list.html:15
+msgid "Email"
+msgstr ""
+
+#: room/templates/ajax_modify_room_template.html:23
+msgid "Room Management"
+msgstr ""
+
+#: room/templates/building.html:10
+msgid "Building List"
+msgstr ""
+
+#: room/templates/device.html:9
+msgid "Device List"
+msgstr ""
+
+#: room/templates/modify_template.html:17
+msgid "Name :"
+msgstr ""
+
+#: room/templates/modify_template.html:22
+msgid "Floor :"
+msgstr ""
+
+#: room/templates/modify_template.html:26
+msgid "Status :"
+msgstr ""
+
+#: room/templates/modify_template.html:36 room/templates/room_index.html:23
+msgid "Device"
+msgstr ""
+
+#: room/templates/room_index.html:8
+msgid "Conferance Room"
+msgstr ""
+
+#: staff/models.py:77
+msgid "Instructor"
+msgstr ""
+
+#: staff/templates/staff_detail.html:9
+msgid "Student Detail"
+msgstr ""
+
+#: staff/templates/staff_detail.html:13 staff/templates/staff_index.html:16
+#: staff/templates/staff_list.html:16
+msgid "Gender"
+msgstr ""
+
+#: staff/templates/staff_index.html:5
+msgid "Staff "
+msgstr ""
+
+#: transaction_log/templates/base_transaction_template.html:3
+#: transaction_log/templates/base_transaction_template.html:7
+msgid "Transaction Management"
+msgstr ""
+
+#: transaction_log/templates/transaction_create_form.html:4
+#: transaction_log/templates/transaction_success.html:4
+#: transaction_log/templates/transaction_update_form.html:4
+msgid "Manual Transaction"
+msgstr ""
+
+#: transaction_log/templates/transaction_detail.html:7
+msgid "Transaction formation"
+msgstr ""
+
+#: transaction_log/templates/transaction_index.html:13
+msgid "Room"
+msgstr ""
+
+#: transaction_log/templates/transaction_index.html:36
+#: transaction_log/templates/transaction_index.html:39
+#: transaction_log/templates/transaction_index.html:45
+msgid "Search"
+msgstr ""
+
+#: transaction_log/templates/transaction_index.html:54
+msgid "By Room"
+msgstr ""
+
+#: transaction_log/templates/transaction_index.html:62
+msgid "By Device"
+msgstr ""
+
+#: transaction_log/templates/transaction_index.html:76
+msgid "Add Transaction"
+msgstr ""
+
+#: transaction_log/templates/transaction_success.html:9
+msgid "Success"
+msgstr ""

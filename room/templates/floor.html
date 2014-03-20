@@ -1,0 +1,28 @@
+{% extends "base_room_template.html" %}
+{% load i18n webdesign%}
+
+{%  block  maincontent %}
+<h1>{% trans  'Conferance Rooms'%}</h1>
+  <div class="container_12">
+	<h2>{% trans page_info.title %} <a href='/room/floor/add'>+</a></h2>
+            <p>
+                {% lorem 1 p %}
+            </p>
+    <div class="clearfix">&nbsp;</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th width="5%" scope="col">
+            <input type="checkbox" name="checkbox" id="checkbox" class="checkall" /><label for="checkbox"></label></th>
+            <th scope="col">Name</th>
+            <th scope="col">Building</th>
+        </tr>
+        {% for  floor in floor_list%}
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox{{floor.id}}" id="checkbox{{floor.id}}" /></td>
+            <td scope="col"><a href ="{{floor.get_absolute_url}}/modify/">{{floor.name}}</a></td>
+            <td scope="col">{{floor.building}}</td>
+        </tr>
+        {% endfor%}
+
+    </table>
+{% endblock%}

@@ -1,0 +1,126 @@
+{% load admin_static i18n %}
+{% load url from future %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{% block title%}{% trans 'University Time Attendenced System' %}{%endblock%}</title>
+<script type="text/javascript" SRC="/media/js/jquery-1.7.2.min.js"></script>
+    <!-- MASTER STYLESHEET-->
+    <link href="/media/css/styles.css" rel="stylesheet" type="text/css" />
+    <!-- LOAD TIPSY TOOLTIPS-->
+    <script type="text/javascript" SRC="/media/js/jquery.tipsy.js"></script>
+    <!-- LOAD CUSTOM JQUERY SCRIPTS-->
+    <script type="text/javascript" SRC="/media/js/scripts.js"></script>
+	 <!-- LOAD FACEBOX -->
+	<script type="text/javascript" SRC="/media/js/facebox.js"></script>
+    <link href="/media/css/facebox.css" rel="stylesheet" type="text/css" />
+    <!-- LOAD FLOT GRAPHS -->
+    <script type="text/javascript" SRC="/media/js/jquery.flot.pack.js"></script>
+    <!--[if IE]>
+     <script language="javascript" type="text/javascript" SRC="/media/js/excanvas.pack.js"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+    <script SRC="/media/js/pngfix.js"></script>
+    <script>
+        DD_belatedPNG.fix('.png_bg');
+    </script>
+    <![endif]-->
+    <!-- LOAD GRAPH JAVASCRIPT FILE-->
+	<script SRC="/media/js/graphs.js" type="text/javascript"></script>
+{% block extrahrad %}{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+</head>
+
+<body class="{% if is_popup %}popup{% endif %}{% block bodyclass %}{% endblock %}">
+
+<!-- Container -->
+<div id="container">
+    {% if not is_popup %}
+    <!-- Header -->
+    <div id="header" class="png_bg">
+        <div id="head_warp" class="container_12">
+            <div id="logo" class="grid_4"><h1>Time<span>Attendance</span></h1></div>
+            {% comment %}
+            <div id="branding">{% block branding %}{% endblock %}</div>
+            {% endcomment %}
+            {% if user.is_active and user.is_staff %}
+            <div id="controlpanel" class="grid_8">
+                <ul>
+                    <li><p>{% trans 'Welcome,' %}<strong>{% filter force_escape %}{% firstof user.first_name user.username %}{% endfilter %}</strong>.</p></li>
+                    {% block userlinks %}
+                        <li>{% url 'django-admindocs-docroot' as docsroot %}</li>
+                        {% if docsroot %}
+                            <li><a href="{{ docsroot }}">{% trans 'Documentation' %}</a> </li>
+                        {% endif %}
+                        <li><a href="{% url 'admin:password_change' %}" class="first">{% trans 'Change password' %}</a></li>
+                        <li><a href="{% url 'admin:logout' %}" class="last">{% trans 'Log out' %}</a></li>
+                    {% endblock %}
+                </ul>
+            </div>
+            {% endif %}
+            <div id="navigation" class=" grid_12">
+                <ul>
+                    <li><a href="/manage/" class="section">Dashboard</a></li>
+					<li><a href="/academic/calendar/" class="section">Calendar</a></li>
+                    <li><a href="/manage/academic/" class="section">Academic</a></li>
+                    <li><a href="/manage/holiday/" class="section">Holiday</a></li>
+                    <li><a href="/manage/room/" class="section">Room</a></li>
+					<li><a href="/manage/transaction_log/" class="section">Transaction Log</a></li>
+					<li><a href="/manage/report/" class="section">Report</a></li>
+					<li><a href="/settings/" class="section">Setting</a></li>
+                </ul>
+			  {% comment %}
+                <ul>
+                    <li><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
+                    {% if title %} <li> {{ title }}</li>{% endif %}
+                </ul>
+			  {% endcomment%}
+            </div>
+            {% block nav-global %}{% endblock %}
+        </div>
+    </div>
+    <!-- END Header -->
+    {% block breadcrumbs %}
+    <div id="sub_nav" class="breadcrumbs">
+        <div id="subnav_wrap" class="container_12">
+            <div id="subnav" class="grid_12">
+                <ul>
+                    <li><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
+                    {% if title %} <li> {{ title }}</li>{% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    {% endif %}
+
+    {% block messages %}
+        {% if messages %}
+        <ul class="messagelist">{% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}</ul>
+        {% endif %}
+    {% endblock messages %}
+
+    <!-- Content -->
+    <div id="main_content_wrap" class="{% block coltype %}colM{% endblock %} container_12">
+        {% block pretitle %}{% endblock %}
+        {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+        {% block content %}
+        {% block object-tools %}{% endblock %}
+        {{ content }}
+        {% endblock %}
+        {% block sidebar %}{% endblock %}
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    {% block footer %}<div id="footer"></div>{% endblock %}
+</div>
+<!-- END Container -->
+
+</body>
+</html>

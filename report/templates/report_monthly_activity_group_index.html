@@ -1,0 +1,25 @@
+{% extends "base_report_template.html" %}
+{% load i18n webdesign staticfiles %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
+{%  block  maincontent %}
+    <h1>{% trans 'Report' %}</h1>
+    <div class="container_12">
+        <div class="block margin-bottom">
+            <h3 class="block-title green-gradient glossy">{% trans 'Class Monthly Report' %}</h3>
+            <div class="with-padding">
+                <ul>
+                    {% for activity_group in activity_group_list %}
+                    <li><a href="{% url report_monthly_activity_group_detail_url year month activity_group.id %}">{{activity_group.name}}</a></li>
+                    {% endfor %}
+                    <li><a href="{% url report_monthly_activity_group_detail_url year month 0 %}">{% trans "All activity" %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock%}

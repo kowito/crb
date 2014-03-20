@@ -1,0 +1,9 @@
+{% extends "base_template.html" %}
+{% load i18n %}
+{% block nav_transaction_log %}<li><a href="/transaction" class="active">{% trans 'Transaction Management'%}</a></li>{% endblock%}
+
+{% block  subnav%}
+        <ul>
+            <li><a href="#" class="sub_nav_active">{% trans "Transaction Management"%}</a></li>
+        </ul>
+    {% endblock %}

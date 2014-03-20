@@ -1,0 +1,37 @@
+{% extends "base_room_template.html" %}
+{% load i18n webdesign  pagination_tags  %}
+
+{%  block  maincontent %}
+{% autopaginate building_list 10 %}
+<h1>{% trans  'Conferance Rooms'%}</h1>
+  <div class="container_12">
+	<h2>{% trans page_info.title %} <a href='/room/building/add'>+</a></h2>
+            <p>
+                {% trans 'Building List' %}{% lorem 1 p%}
+            </p>
+    <div class="clearfix">&nbsp;</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th width="5%" scope="col"><input type="checkbox" name="checkbox" id="checkbox" class="checkall" /><label for="checkbox"></label></th>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+            <th width="10%" scope="col">Action</th>
+        </tr>
+
+        {% for  building in building_list %}
+        <tr>
+            <td scope="col"><input type="checkbox" name="checkbox{{building.id}}" id="checkbox{{building.id}}" /></td>
+            <td scope="col"><a href={{ building.get_absolute_url }}/modify/>{{building.name}}</a></td>
+            <td scope="col">{{building.status}}</td>
+            <td>
+                <a href = "{{building.get_absolute_url}}/modify/">Edit</a>
+                <a href = "{{building.get_absolute_url}}/delete/">Delete</a>
+            </td>
+        </tr>
+        {% endfor%}
+    </table>
+    <div class="grid_12">
+    <div class="clearfix">&nbsp;</div>
+    {% paginate %}
+    </div>
+{% endblock%}

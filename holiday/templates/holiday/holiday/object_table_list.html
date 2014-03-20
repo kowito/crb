@@ -1,0 +1,59 @@
+
+
+{% load i18n %}
+
+<p>
+  {% trans "Click on the primary key value to access the individual Holiday's page." %}
+</p>
+<table class='table table-bordered table-striped'>
+  <thead>
+    <tr>
+      <th>
+        id
+      </th>
+      
+        <th>
+          name
+        </th>
+      
+        <th>
+          holiday_type
+        </th>
+      
+        <th>
+          start_date
+        </th>
+      
+        <th>
+          end_date
+        </th>
+      
+        <th>
+          status
+        </th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for object in object_list %}
+      <tr>
+        <td>
+          <a href='{{ object.get_absolute_url }}'>
+            {{ object.id|stringformat:".3d" }}
+          </a>
+        </td>
+        
+          <td>{{ object.name }}</td>
+        
+          <td>{{ object.holiday_type }}</td>
+        
+          <td>{{ object.start_date }}</td>
+        
+          <td>{{ object.end_date }}</td>
+        
+          <td>{{ object.status }}</td>
+        
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,36 @@
+{% extends "base_transaction_template.html" %}
+{% load i18n %}
+{%  block  maincontent %}
+<h1>{{transaction.get_people}}</h1>
+
+<div class="container_12">
+    <div class="block margin-bottom">
+        <h3 class="block-title green-gradient glossy">{% trans 'Transaction formation' %}</h3>
+        <div class="with-padding">
+            <table width="100%">
+                <tr>
+                    <td>ID : </td>
+                    <td>{{transaction.id}}</td>
+                </tr>
+                <tr>
+                    <td>Attendance : </td>
+                    <td>{{transaction.get_people}}</td>
+                </tr>
+                <tr>
+                    <td>Device : </td>
+                    <td>{{transaction.device}}</td>
+                </tr>
+                <tr>
+                    <td>Room : </td>
+                    <td>{{transaction.device.room}}</td>
+                </tr>
+                <tr>
+                    <td>Time : </td>
+                    <td>{{transaction.timestamp}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{%  endblock %}

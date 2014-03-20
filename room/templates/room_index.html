@@ -1,0 +1,38 @@
+{% extends "base_room_template.html" %}
+{% load i18n webdesign staticfiles %}
+
+{%  block  maincontent %}
+<div class="clearfix">&nbsp;</div>
+<div class="container_12">
+	  <div class="grid_6 alpha" id="room_selection">
+			<h2>{% trans 'Conferance Room'%}</h2>
+            <div id="icondock" class="grid_6">
+            <ul>
+                {% for room in room_list %}
+                <li>
+                    <a rel="facebox" href="/room/room/ajax/{{room.id}}/modify/" original-title="{{room.name}}">
+                    <img alt="Room" src="{% static 'images/icon/32/classroom.png'%}"><br>{{room.name}}
+                    <span>{{room.device_set.count}}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            </div>
+	  </div>
+	  <div class="grid_6 omega" id="room_info">
+			<h2>{% trans  'Device'%}</h2>
+
+            <div id="icondock" class="grid_6">
+            <ul>
+                {% for device in device_list %}
+                <li>
+                    <a rel="facebox" href="/room/device/ajax/{{device.id}}/modify/" original-title="{{device.name}}">
+                        <img alt="Room" src="{% static 'images/icon/32/fingerprint_green.png'%}"><br>{{device.device_code}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            </div>
+	  </div>
+</div>
+{% endblock%}

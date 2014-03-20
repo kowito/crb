@@ -1,0 +1,74 @@
+{% extends "base_staff_template.html" %}
+{% load i18n webdesign pagination_tags%}
+
+{%  block  maincontent %}
+<div class="container_12">
+    <div class="clearfix">&nbsp;</div>
+    <div class="grid_6">
+        <div class="block-title green-gradient glossy">
+            {% trans 'Student ' %}
+            <div class="float-right">
+                <div class="button-group">
+                    <a href="#" title="Add Staff" class="button icon-add-user green-gradient glossy"></a>
+                    <a href="#" title="Upload Staff" class="button icon-users green-gradient glossy"></a>
+                </div>
+            </div>
+        </div>
+
+        
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table responsive-table responsive-table-on">
+            <tr>
+                <th scope="col">{% trans 'Code' %}</th>
+                <th scope="col">{% trans 'Name' %}</th>
+            </tr>
+            {% for  student in student_list%}
+            <tr>
+                <td scope="col">{{student.student_code}}</td>
+                <td scope="col"><a href='{% url detail_staff 2 student.people.id %}'>{{student.people.title}}{{student.people.name_th}} {{student.people.lastname_th}}</a></td>
+            </tr>
+            {% endfor%}
+        </table>
+        <div class="">&nbsp;</div>
+
+    </div>
+
+
+
+
+    <div class="grid_6">
+        <div class="block-title green-gradient glossy">
+            {% trans 'Instructure'%}
+            <div class="float-right">
+                <div class="button-group">
+                    <a href="#" title="Add Staff" class="button icon-add-user green-gradient glossy"></a>
+                    <a href="#" title="Upload Staff" class="button icon-users green-gradient glossy"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table responsive-table responsive-table-on">
+            <tr>
+                <th scope="col">{% trans 'Code' %}</th>
+                <th scope="col">{% trans 'Name' %}</th>
+            </tr>
+            {% for  teacher in teacher_list%}
+            <tr>
+                <td scope="col">{{teacher.employee_code}}</td>
+                <td scope="col"><a href='{% url detail_staff 1 teacher.people.id %}'>{{teacher.people.title}}{{teacher.people.name_th}} {{teacher.people.lastname_th}}</a></td>
+            </tr>
+            {% endfor%}
+        </table>
+        <div class="">&nbsp;</div>
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+{% endblock%}

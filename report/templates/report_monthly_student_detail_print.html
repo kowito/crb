@@ -1,0 +1,45 @@
+{% extends "base_report_template_print.html" %}
+{% load i18n webdesign staticfiles %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
+{%  block  maincontent %}
+    <div class="clearfix">&nbsp;</div>
+    <div class="container_12">
+        <div class="table-header button-height green-gradient glossy"><a href="{% url detail_staff 2 student.people.id %} ">{{caption}} </a>: {{date|date:"F Y"}}
+            <div class="float-right">
+                <div class="button-group">
+                    <a href="{% url report_monthly_student_detail_pageview_url year month student.id 'print' %}" title="Print View" class="button green-gradient glossy">{% trans 'Print View'%}</a>
+                    <a href="{% url report_monthly_student_detail_pageview_url year month student.id 'excel' %}" title="Excel" class="button green-gradient glossy">{% trans 'Excel'%}</a>
+                </div>
+            </div>
+        </div>
+        <table class="table responsive-table responsive-table-on">
+            <thead>
+                <tr>
+                    <th>{% trans 'Event' %}</th>
+                    <th>{% trans 'Date' %}</th>
+                    <th>{% trans 'Time' %}</th>
+                    <th>{% trans 'Check In' %}</th>
+                    <th>{% trans 'Check Out' %}</th>
+                    <th>{% trans 'Status' %}</th>
+                </tr>
+            </thead>
+            {% for tx in transaction_list %}
+            <tr onclick="document.location = '{{tx.activity.get_absolute_url}}';">
+                <td>{{tx.activity}}</td>
+                <td>{{tx.activity.date}}</td>
+                <td>{{tx.activity.start_time}}-{{tx.activity.end_time}}</td>
+                <td>{{tx.check_in}}</td>
+                <td>{{tx.check_out}}</td>
+                <td><small class="tag {{tx.tx_bg_color}}">{{tx.get_transaction_status_display}}</small></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="table-footer button-height large-margin-bottom green-gradient glossy"></div>
+    </div>
+{% endblock%}

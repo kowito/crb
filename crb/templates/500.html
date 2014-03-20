@@ -1,0 +1,18 @@
+{% extends "base_template.html" %}
+{% load i18n  pagination_tags %}
+{% block nav_dashboard %}<li><a href="/" class="active">{% trans 'Dashboard'%}</a></li>{% endblock%}
+{%  block  subnav %}{% endblock%}
+{%  block  maincontent %}
+
+<h1>{% trans 'Account Settings' %}</h1>
+  <div class="container_12">
+	<div class="block margin-bottom">
+	<h3 class="block-title green-gradient glossy">{% trans 'Error 500'%}</h3>
+	  <div class="with-padding">
+		{% trans " ERROR 500 : Internal Server Error "%}
+	  </div>
+	</div>
+  </div>
+
+
+{% endblock%}

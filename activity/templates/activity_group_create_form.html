@@ -1,0 +1,22 @@
+{% extends "base_activity_template.html" %}
+{% load i18n webdesign staticfiles%}
+
+
+{% block javascript %}
+
+{% endblock %}
+{%  block  maincontent %}
+<h1>{% trans "Create Activity Group"%}</h1>
+
+<div class="container_12">
+    <div class="block margin-bottom">
+    <div class="block-title green-gradient glossy"></div>
+        <form action="{% url create_activity_group_url%}" method="POST">{% csrf_token %}
+        <div class="with-padding">
+            {{form.as_p}}
+            <button type="submit" class="button green-gradient">{% trans 'Save' %}</button>
+        </div>
+        </form>
+    </div>
+</div>
+{%  endblock %}

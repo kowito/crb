@@ -1,0 +1,45 @@
+{% extends "base_report_template.html" %}
+{% load i18n webdesign staticfiles %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
+{%  block  maincontent %}
+    <h1>{% trans 'Report' %}</h1>
+    <div class="container_12">
+        <div class="table-header button-height green-gradient glossy">{% trans 'Student monthly report' %} : {{date|date:"F Y"}}
+            <div class="float-right">
+                <div class="button-group">
+                    <a href="javascript:void(0);" title="Print View" class="button green-gradient glossy">{% trans 'Print View'%}</a>
+                    <a href="javascript:void(0);" title="Excel" class="button green-gradient glossy">{% trans 'Excel'%}</a>
+                </div>
+            </div>
+        </div>
+        <table class="table responsive-table responsive-table-on">
+            <thead>
+                <tr>
+                    <th>{% trans 'Code' %}</th>
+                    <th>{% trans 'Title' %}</th>
+                    <th>{% trans 'Name' %}</th>
+                    <th>{% trans 'Lastname' %}</th>
+                    <th>{% trans 'Citizen id' %}</th>
+                    <th>{% trans 'Email' %}</th>
+                </tr>
+            </thead>
+            {% for student in student_list %}
+            <tr onclick="document.location = '{% url report_monthly_student_detail_url year month student.id %}';">
+                <td>{{student.student_code}}</td>
+                <td>{{student.people.title}}</td>
+                <td>{{student.people.name_th}}</td>
+                <td>{{student.people.lastname_th}}</td>
+                <td>{{student.people.citizen_id}}</td>
+                <td>{{student.people.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="table-footer button-height large-margin-bottom  green-gradient glossy"></div>
+    </div>
+{% endblock%}

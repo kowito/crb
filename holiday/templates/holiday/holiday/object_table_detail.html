@@ -1,0 +1,64 @@
+
+
+{% load i18n %}
+
+<table class='table table-bordered table-striped'>
+  <thead>
+    <tr>
+      <th>
+        {% trans "Field" %}
+      </th>
+      <th>
+        {% trans "Value" %}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        id
+      </td>
+      <td>
+        <a href='{{ object.get_absolute_url }}'>
+          {{ object.id|stringformat:".3d" }}
+        </a>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        name
+      </td>
+      <td>{{ object.name }}</td>
+    </tr>
+    
+    <tr>
+      <td>
+        holiday_type
+      </td>
+      <td>{{ object.holiday_type }}</td>
+    </tr>
+    
+    <tr>
+      <td>
+        start_date
+      </td>
+      <td>{{ object.start_date }}</td>
+    </tr>
+    
+    <tr>
+      <td>
+        end_date
+      </td>
+      <td>{{ object.end_date }}</td>
+    </tr>
+    
+    <tr>
+      <td>
+        status
+      </td>
+      <td>{{ object.status }}</td>
+    </tr>
+    
+  </tbody>
+</table>

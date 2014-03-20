@@ -1,0 +1,44 @@
+{% extends "base_report_template.html" %}
+{% load i18n webdesign staticfiles %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(function() {
+    $( "#startdate" ).datepicker({ dateFormat: 'dd-mm-yy' });
+	$( "#enddate" ).datepicker({ dateFormat: 'dd-mm-yy' });
+  });
+ </script>
+{% endblock %}
+{%  block  maincontent %}
+    <h1>{% trans 'Report' %}</h1>
+    <div class="container_12">
+		<div class="grid_6">
+            <div class="block margin-bottom">
+            <h3 class="block-title green-gradient glossy">{% trans 'Monthly Report' %}</h3>
+            <div class="with-padding">
+				<form action="{% url report_custom_url %}" method="POST">
+                {% csrf_token %}
+                {{ custom_report_form.as_p }}
+				<input type="submit" value="Submit">
+				</form>
+            </div>
+            </div>
+        </div>
+		
+		 <div class="grid_6">
+            <div class="block margin-bottom">
+            <h3 class="block-title green-gradient glossy">{% trans 'Group Summary Report' %}</h3>
+            <div class="with-padding">
+				<form action="{% url report_custom_activity_group_url %}" method="POST">
+                {% csrf_token %}
+                {{ custom_summary_report_form.as_p }}
+				<input type="submit" value="Submit">
+				</form>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock%}

@@ -1,0 +1,33 @@
+{% extends "base_academic_template.html" %}
+{% load i18n webdesign%}
+
+{%  block  maincontent %}
+<h1>{% trans 'School Room'%}
+<a href ="{% url academic_add_model 'schoolroom' %}"> + </a>
+</h1>
+  <div class="container_12 box-warp">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th scope="col">{% trans 'School Room' %}</th>
+            <th scope="col">{% trans 'Semester' %}</th>
+            <th scope="col">{% trans 'Course' %}</th>
+            <th scope="col">{% trans 'Section Round' %}</th>
+            <th scope="col">{% trans 'Start date' %}</th>
+            <th scope="col">{% trans 'End Date' %}</th>
+
+        </tr>
+
+        {% for  schoolroom in schoolroom_list %}
+        <tr>
+            <td scope="col"><a href ="{% url academic_modify_model 'schoolroom' schoolroom.id %}">{{schoolroom}}</a></td>
+            <td scope="col">{{schoolroom.semester}}</td>
+            <td scope="col">{{schoolroom.course}}</td>
+            <td scope="col">{{schoolroom.section_round}}</td>
+            <td scope="col">{{schoolroom.start_date}}</td>
+            <td scope="col">{{schoolroom.end_date}}</td>
+        </tr>
+        {% endfor%}
+
+    </table>
+  </div>
+{% endblock%}

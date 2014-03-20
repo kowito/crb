@@ -1,0 +1,443 @@
+[
+    {
+        "pk": 1,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.101",
+            "people": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.102",
+            "people": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.103",
+            "people": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.104",
+            "people": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.105",
+            "people": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.106",
+            "people": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.107",
+            "people": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.108",
+            "people": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.109",
+            "people": 9
+        }
+    },
+    {
+        "pk": 10,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.201",
+            "people": 10
+        }
+    },
+    {
+        "pk": 11,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.202",
+            "people": 11
+        }
+    },
+    {
+        "pk": 12,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.203",
+            "people": 12
+        }
+    },
+    {
+        "pk": 13,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.204",
+            "people": 13
+        }
+    },
+    {
+        "pk": 14,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.205",
+            "people": 14
+        }
+    },
+    {
+        "pk": 15,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.206",
+            "people": 15
+        }
+    },
+    {
+        "pk": 16,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.207",
+            "people": 16
+        }
+    },
+    {
+        "pk": 17,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.208",
+            "people": 17
+        }
+    },
+    {
+        "pk": 18,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.209",
+            "people": 18
+        }
+    },
+    {
+        "pk": 19,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.301",
+            "people": 19
+        }
+    },
+    {
+        "pk": 20,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.302",
+            "people": 20
+        }
+    },
+    {
+        "pk": 21,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.303",
+            "people": 21
+        }
+    },
+    {
+        "pk": 22,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.304",
+            "people": 22
+        }
+    },
+    {
+        "pk": 23,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.305",
+            "people": 23
+        }
+    },
+    {
+        "pk": 24,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.306",
+            "people": 24
+        }
+    },
+    {
+        "pk": 25,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.307",
+            "people": 25
+        }
+    },
+    {
+        "pk": 26,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.308",
+            "people": 26
+        }
+    },
+    {
+        "pk": 27,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.309",
+            "people": 27
+        }
+    },
+    {
+        "pk": 28,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.401",
+            "people": 28
+        }
+    },
+    {
+        "pk": 29,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.402",
+            "people": 29
+        }
+    },
+    {
+        "pk": 30,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.403",
+            "people": 30
+        }
+    },
+    {
+        "pk": 31,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.404",
+            "people": 31
+        }
+    },
+    {
+        "pk": 32,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.405",
+            "people": 32
+        }
+    },
+    {
+        "pk": 33,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.406",
+            "people": 33
+        }
+    },
+    {
+        "pk": 34,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.407",
+            "people": 34
+        }
+    },
+    {
+        "pk": 35,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.408",
+            "people": 35
+        }
+    },
+    {
+        "pk": 36,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "S.409",
+            "people": 36
+        }
+    },
+    {
+        "pk": 37,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "N.101",
+            "people": 37
+        }
+    },
+    {
+        "pk": 38,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "N.102",
+            "people": 38
+        }
+    },
+    {
+        "pk": 50,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "PD.101",
+            "people": 50
+        }
+    },
+    {
+        "pk": 53,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "PL.101",
+            "people": 53
+        }
+    },
+    {
+        "pk": 54,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "PL.102",
+            "people": 54
+        }
+    },
+    {
+        "pk": 55,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "PL.103",
+            "people": 55
+        }
+    },
+    {
+        "pk": 56,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "PL.201",
+            "people": 56
+        }
+    },
+    {
+        "pk": 57,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "PL.202",
+            "people": 57
+        }
+    },
+    {
+        "pk": 58,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "PL.203",
+            "people": 58
+        }
+    },
+    {
+        "pk": 77,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "U.101",
+            "people": 77
+        }
+    },
+    {
+        "pk": 78,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "U.102",
+            "people": 78
+        }
+    },
+    {
+        "pk": 79,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "U.103",
+            "people": 79
+        }
+    },
+    {
+        "pk": 80,
+        "model": "staff.student",
+        "fields": {
+            "status": true,
+            "student_code": "U.104",
+            "people": 80
+        }
+    }
+]

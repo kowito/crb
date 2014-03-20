@@ -1,0 +1,13 @@
+{% extends "base_template.html" %}
+{% load i18n %}
+{% block nav_room %}<li><a href="/room" class="active">{% trans 'Conferance Rooms'%}</a></li>{% endblock%}
+
+{%  block  subnav %}
+    <ul>
+        <li><a href="/room/" class="{% if page_info.home_tab%}sub_nav_active{% endif %}">Conferance Room</a></li>
+        <li><a href="/room/room/" class="{% if page_info.room_tab %}sub_nav_active{% endif %}">Room</a></li>
+        <li><a href="/room/floor/" class="{% if page_info.floor_tab %}sub_nav_active{% endif %}">Floor</a></li>
+        <li><a href="/room/building/" class="{% if page_info.building_tab %}sub_nav_active{% endif %}">Building</a></li>
+        <li><a href="/room/device/" class="sub_nav_last {% if page_info.device_tab %}sub_nav_active{% endif %}">Device</a></li>
+    </ul>
+{% endblock%}

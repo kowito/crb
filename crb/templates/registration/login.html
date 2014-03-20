@@ -1,0 +1,24 @@
+{% extends "base_template.html" %}
+{% load i18n  pagination_tags %}
+{% block nav_dashboard %}<li><a href="/" class="active">{% trans 'Dashboard'%}</a></li>{% endblock%}
+{%  block  subnav %}{% endblock%}
+{%  block  maincontent %}
+
+<h1>Please login</h1>
+<div class="container_12">
+    <div class="block margin-bottom">
+        <h3 class="block-title green-gradient glossy">{% trans "Please Login" %}</h3>
+        <div class="with-padding">
+            <form method="post" action="{% url auth_login %}">
+                {% csrf_token %}
+                {{form.errors}}
+                <p><label for="id_username">Username:</label> <input id="id_username" type="text" name="username" maxlength="30" /></p>
+                <p><label for="id_password">Password:</label> <input type="password" name="password" id="id_password" /></p>
+
+                <input type="submit" value="Log in" />
+                <input type="hidden" name="next" value="" />
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock%}

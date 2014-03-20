@@ -1,0 +1,39 @@
+{% extends "base_academic_template.html" %}
+{% load i18n %}
+
+{%  block  maincontent %}
+<h1>{% trans page_info.title %} <a href ='./add'>+</a></h1>
+<div class="grid_12 box-warp">
+<div class="clearfix">&nbsp;</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+        <!--
+            <th width="5%" scope="col"><input type="checkbox" name="checkbox" id="checkbox" class="checkall" /><label for="checkbox"></label></th>
+            -->
+            {% for filed_name in filed_names %}
+            <th scope="col">{{filed_name|capfirst}}</th>
+            {% endfor %}
+            <th scope="col" Width="5%">{% trans 'Action'%}</th>
+        </tr>
+        {% for  item in model_list%}
+        <tr>
+            <!--
+            <td scope="col"><input type="checkbox" name="checkbox{{item.id}}" id="checkbox{{item.id}}" /></td>
+            -->
+            {% for i in item %}
+            <td>{{i}}</td>
+            {% endfor%}
+            <td>
+                <a href = "/academic/course/{{model_type}}/{{item.0}}/modify/" class="changelink">Edit</a>
+            </td>
+        </tr>
+        {% endfor%}
+        
+        {% for  item in cl%}
+        <tr>
+        <td>{{item}}</td>
+        </tr>
+        {% endfor%}
+    </table>
+</div>
+{% endblock%}

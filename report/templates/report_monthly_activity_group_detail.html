@@ -1,0 +1,39 @@
+{% extends "base_report_template.html" %}
+{% load i18n webdesign staticfiles %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
+{%  block  maincontent %}
+    <h1>{% trans 'Report' %}</h1>
+    <div class="container_12">
+        <div class="table-header button-height"> {{caption}} : {{date|date:"F Y"}} </div>
+        <table class="table responsive-table responsive-table-on">
+            <thead>
+                <tr>
+                    <th>{% trans 'Event' %}</th>
+                    <th>{% trans 'Date' %}</th>
+                    <th>{% trans 'Start Time' %}</th>
+                    <th>{% trans 'End Time' %}</th>
+                    <th>{% trans 'OK' %}</th>
+                    <th>{% trans 'Late' %}</th>
+                    <th>{% trans 'Miss' %}</th>
+                </tr>
+            </thead>
+            {% for activity in activity_list %}
+            <tr>
+                <td><a href="{% url activity_detail_url activity.date.year activity.date.month activity.date.day activity.id %}">{{activity.name}}</a></td>
+                <td>{{activity.date}}</td>
+                <td>{{activity.start_time}}</td>
+                <td>{{activity.end_time}}</td>
+                <td>{{activity.stat_ok}}</td>
+                <td>{{activity.stat_late}}</td>
+                <td>{{activity.stat_miss}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock%}

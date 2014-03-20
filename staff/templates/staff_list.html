@@ -1,0 +1,65 @@
+{% extends "base_staff_template.html" %}
+{% load i18n webdesign pagination_tags%}
+
+{%  block  maincontent %}
+
+  <div class="container_12">
+    <div class="clearfix">&nbsp;</div>
+    {% autopaginate staff_list 10 %}
+
+    <div class="table-header button-height green-gradient glossy">
+      {{page_info.title|capfirst }}
+      <div class="float-right">
+          <div class="button-group">
+            <a href="#" title="Add Staff" class="button icon-add-user green-gradient glossy"></a>
+            <a href="#" title="Upload Staff" class="button icon-users green-gradient glossy"></a>
+          </div>
+      </div>
+    </div>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table responsive-table responsive-table-on">
+        <tr>
+            <th scope="col">{% trans 'Code' %}</th>
+            <th scope="col">{% trans 'Title' %}</th>
+            <th scope="col">{% trans 'Name' %}</th>
+            <th scope="col">{% trans 'Lastname'%}</th>
+            <th scope="col">{% trans 'Email'%}</th>
+            <th scope="col">{% trans 'Gender'%}</th>
+            <th scope="col">{% trans 'Status'%}</th>
+            <th scope="col">{% trans 'Action'%}</th>
+        </tr>
+
+        {% for  staff in staff_list %}
+        <tr>
+
+            <td scope="col">
+              {% if staff.student_code %}{{staff.student_code}}{% endif%}
+              {% if staff.employee_code %}{{staff.employee_code}}{% endif%}
+            </td>
+            <td scope="col">{{staff.people.title}}</td>
+            <td scope="col"
+                {% if not staff.people.is_citizen_id_verify %}
+                class="icon-warning icon-size2 orange"
+                {% endif %}>
+              <a href='{% url detail_staff 2 staff.people.id %}'>
+                {{staff.people.name_th}}
+              </a>
+            </td>
+            <td scope="col"><a href='{% url detail_staff 2 staff.people.id %}'>{{staff.people.lastname_th}}</a></td>
+            <td scope="col">{{staff.people.email}}</td>
+            <td scope="col">{{staff.people.get_gender_display}}</td>
+            <td scope="col">{{staff.people.status}}</td>
+            <td scope="col">
+              <div class="button-group">
+                <a href="#" title="Edit Staff" class="button icon-gear green-gradient glossy"></a>
+                <a href="#" title="Delete Staff" class="button icon-cross-round green-gradient glossy"></a>
+              </div>
+            </td>
+        </tr>
+        {% endfor%}
+
+    </table>
+    <div class="table-footer button-height large-margin-bottom green-gradient glossy"></div>
+    {% paginate %}
+
+{% endblock%}

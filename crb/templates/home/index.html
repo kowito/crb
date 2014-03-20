@@ -1,0 +1,62 @@
+{% extends "base_template.html" %}
+{% load i18n  pagination_tags %}
+{% block nav_dashboard %}<li><a href="/" class="active">{% trans 'Dashboard'%}</a></li>{% endblock%}
+{%  block  subnav %}{% endblock%}
+{%  block  maincontent %}
+
+<h1>Dashboard</h1>
+  <div class="container_12">
+	<h2>Teacher</h2>
+    <div class="clearfix">&nbsp;</div>
+    {% autopaginate instructor_list 10 %}
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            
+            <th scope="col">Employee ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Fingerprint Code</th>
+        </tr>
+        {% for instructor in instructor_list%}
+        <tr>
+            <td scope="col">{{instructor.people.code}}{{instructor.people}}</td>
+            <td scope="col">{{instructor.people.title}}</td>
+            <td scope="col">{{instructor.people.name}}</td>
+            <td scope="col">{{instructor.people.lastname}}</td>
+            <td scope="col">{{instructor.people.fingerprint_code}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% paginate %}
+    Showing <span>{{ instructor_list.start_index }}</span> - <span>{{ instructor_list.end_index }}</span> of <span>{{ instructor_list.count }}</span> results
+
+    <div class="container_12">
+	<h2>Student</h2>
+    <div class="clearfix">&nbsp;</div>
+    {% autopaginate student_list 10 %}
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th scope="col">Student Code</th>
+            <th scope="col">Title</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Fingerprint Code</th>
+        </tr>
+        {% for student in student_list %}
+        <tr>
+            <td scope="col">{{student.people.code}}</td>
+            <td scope="col">{{student.people.title}}</td>
+            <td scope="col">{{student.people.name}}</td>
+            <td scope="col">{{student.people.lastname}}</td>
+            <td scope="col">{{student.people.fingerprint_code}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <span id='pagination'>
+    {% paginate %}
+    </span>
+    <div class="clearfix">&nbsp;</div>
+    <div>Showing <span>{{ page_obj.start_index }}</span> - <span>{{ page_obj.end_index }}</span> of <span>{{ projects.count }}</span> results</div>
+{% endblock%}

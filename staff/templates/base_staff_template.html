@@ -1,0 +1,11 @@
+{% extends "base_template.html" %}
+{% load i18n %}
+{% block nav_staff %}<li><a href="/staff" class="active">{% trans 'Staff'%}</a></li>{% endblock%}
+
+{%  block  subnav %}
+    <ul>
+        <li><a href="/staff/" class="{% if page_info.home_tab%}sub_nav_active{% endif %}">Staff Manament</a></li>
+        <li><a href="/staff/student/" class="{% if page_info.student_tab %}sub_nav_active{% endif %}">Student</a></li>
+        <li><a href="/staff/teacher/" class="{% if page_info.teacher_tab %}sub_nav_active{% endif %}">Teacher</a></li>
+    </ul>
+{% endblock%}

@@ -1,0 +1,33 @@
+{% load i18n webdesign %}
+
+<script type="text/javascript">
+  /*<![CDATA[*/
+  jQuery(function() {
+      var form = jQuery("#form-container");
+      form.submit(function(e) {
+          jQuery("#sendbutton").attr('disabled', true)
+          jQuery("#sendwrapper").prepend('<span>Saving, please wait... </span>')
+          jQuery("#form-container-block").load(
+              form.attr('action') + ' #form-container-block',
+              form.serializeArray(),
+              function(responseText, responseStatus) {
+                  jQuery("#sendbutton").attr('disabled', false)
+              }
+          );
+          e.preventDefault();
+      });
+  });
+  /*]]>*/
+</script>
+
+<h2>{% trans page_info.title|capfirst%}</h2>
+<form action="/room/{{page_info.title}}/ajax/{{model_id}}/modify/" method="post" id="form-container">{% csrf_token %}
+<div class="grid_8" id='form-container-block'>
+    {{ form.non_field_errors }}
+    {{form.as_p}}
+    <p id="sendwrapper">
+        <input type="submit" class="submit" value="{% trans 'Save' %}" id="sendbutton"/>
+    </p>
+</div>
+
+</form>
